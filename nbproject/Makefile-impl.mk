@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Interfaceing.X
+PROJECTNAME=8_bit_Microcontroller_Interface
 
 # Active Configuration
 DEFAULTCONF=default
