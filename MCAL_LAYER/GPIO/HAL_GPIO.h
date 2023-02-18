@@ -11,5 +11,6 @@
 #include "../../../pic/include/proc/pic18f4620.h"
 #include "../MCAL_STD_TYPES.h"
 #include "../DEVICE_CONFIG.h"
+
 #endif	/* HAL_GPIO_H */
 

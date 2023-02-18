@@ -16,6 +16,7 @@
         <itemPath>MCAL_LAYER/MCAL_STD_TYPES.h</itemPath>
         <itemPath>MCAL_LAYER/STD_LIBRARIES.h</itemPath>
         <itemPath>MCAL_LAYER/COMPILER.h</itemPath>
+        <itemPath>MCAL_LAYER/DEVICE_CONFIG.h</itemPath>
       </logicalFolder>
       <itemPath>Application.h</itemPath>
     </logicalFolder>
@@ -35,6 +36,7 @@
         <logicalFolder name="GPIO" displayName="GPIO" projectFiles="true">
           <itemPath>MCAL_LAYER/GPIO/HAL_GPIO.c</itemPath>
         </logicalFolder>
+        <itemPath>MCAL_LAYER/DEVIC_CONFIG.c</itemPath>
       </logicalFolder>
       <itemPath>Application.c</itemPath>
     </logicalFolder>

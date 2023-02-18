@@ -7,7 +7,9 @@
 
 #ifndef MCAL_STD_TYPES_H
 #define	MCAL_STD_TYPES_H
-#include "STD_LIBRARIES.h"
+
 #include "COMPILER.h"
+#include "STD_LIBRARIES.h"
+
 #endif	/* MCAL_STD_TYPES_H */
 
