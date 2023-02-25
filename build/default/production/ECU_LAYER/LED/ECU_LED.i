@@ -4708,5 +4708,118 @@ Std_ReturnType gpio_port_write_logic(portIndex_t port,uint8_t logic);
 Std_ReturnType gpio_port_read_logic(portIndex_t port,uint8_t *logic);
 Std_ReturnType gpio_port_toggle_logic(portIndex_t port);
 # 14 "ECU_LAYER/LED/ECU_LED.h" 2
-# 7 "ECU_LAYER/LED/ECU_LED.c" 2
 
+# 1 "ECU_LAYER/LED/ECU_LED_CONFIG.h" 1
+# 15 "ECU_LAYER/LED/ECU_LED.h" 2
+# 25 "ECU_LAYER/LED/ECU_LED.h"
+typedef enum{
+    LED_OFF =0,
+    LED_ON
+}led_status;
+
+typedef struct{
+    uint8_t port :3 ;
+    uint8_t pin :3 ;
+    uint8_t led_status :1 ;
+    uint8_t reserved :1 ;
+}led_t;
+
+
+
+Std_ReturnType led_init(const led_t *led);
+Std_ReturnType led_turn_on(const led_t *led);
+Std_ReturnType led_turn_off(const led_t *led);
+Std_ReturnType led_toggle_state(const led_t *led);
+# 7 "ECU_LAYER/LED/ECU_LED.c" 2
+# 17 "ECU_LAYER/LED/ECU_LED.c"
+Std_ReturnType led_init(const led_t *led){
+    Std_ReturnType ret = (Std_ReturnType)0x01 ;
+    if(((void*)0) == led)
+    {
+       ret = (Std_ReturnType)0x00 ;
+    }
+    else if(led->pin > 0x08 -1 || led->port >= 0x05 -1)
+    {
+        ret = (Std_ReturnType)0x00 ;
+    }
+    else
+    {
+        pinConfig_t Pin_obj = {
+        .Port = led->port ,
+        .Pin_Number = led->pin ,
+        .Direction = GPIO_OUTPUT ,
+        .Logic = led->led_status
+        };
+        gpio_pin_direction_init(&Pin_obj);
+    }
+    return ret ;
+}
+# 48 "ECU_LAYER/LED/ECU_LED.c"
+Std_ReturnType led_turn_on(const led_t *led){
+    Std_ReturnType ret = (Std_ReturnType)0x01 ;
+    if(((void*)0) == led)
+    {
+       ret = (Std_ReturnType)0x00 ;
+    }
+    else if(led->pin > 0x08 -1 || led->port >= 0x05 -1)
+    {
+        ret = (Std_ReturnType)0x00 ;
+    }
+    else
+    {
+         pinConfig_t Pin_obj = {
+        .Port = led->port ,
+        .Pin_Number = led->pin ,
+        .Direction = GPIO_OUTPUT ,
+        .Logic = led->led_status
+        };
+        gpio_pin_write_logic(&Pin_obj,GPIO_HIGH);
+    }
+    return ret ;
+}
+# 79 "ECU_LAYER/LED/ECU_LED.c"
+Std_ReturnType led_turn_off(const led_t *led){
+    Std_ReturnType ret = (Std_ReturnType)0x01 ;
+    if(((void*)0) == led)
+    {
+       ret = (Std_ReturnType)0x00 ;
+    }
+    else if(led->pin > 0x08 -1 || led->port >= 0x05 -1)
+    {
+        ret = (Std_ReturnType)0x00 ;
+    }
+    else
+    {
+        pinConfig_t Pin_obj = {
+        .Port = led->port ,
+        .Pin_Number = led->pin ,
+        .Direction = GPIO_OUTPUT ,
+        .Logic = led->led_status
+        };
+        gpio_pin_write_logic(&Pin_obj,GPIO_LOW);
+    }
+    return ret ;
+}
+# 110 "ECU_LAYER/LED/ECU_LED.c"
+Std_ReturnType led_toggle_state(const led_t *led){
+    Std_ReturnType ret = (Std_ReturnType)0x01 ;
+    if(((void*)0) == led)
+    {
+       ret = (Std_ReturnType)0x00 ;
+    }
+    else if(led->pin > 0x08 -1 || led->port >= 0x05 -1)
+    {
+        ret = (Std_ReturnType)0x00 ;
+    }
+    else
+    {
+        pinConfig_t Pin_obj = {
+        .Port = led->port ,
+        .Pin_Number = led->pin ,
+        .Direction = GPIO_OUTPUT ,
+        .Logic = led->led_status
+        };
+        gpio_pin_toggle_logic(&Pin_obj);
+    }
+    return ret ;
+}
