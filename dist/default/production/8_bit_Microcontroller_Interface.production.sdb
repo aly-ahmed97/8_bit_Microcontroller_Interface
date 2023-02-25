@@ -3,7 +3,51 @@
 [d edition pro ]
 [d chip 18F4620 ]
 [d frameptr 4065 ]
-"8 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\Application.c
+"17 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\MCAL_LAYER/GPIO/HAL_GPIO.c
+[e E2802 . `uc
+GPIO_OUTPUT 0
+GPIO_INPUT 1
+]
+"20
+[e E2798 . `uc
+GPIO_LOW 0
+GPIO_HIGH 1
+]
+"30
+[e E2816 . `uc
+PORTA_INDEX 0
+PORTB_INDEX 1
+PORTC_INDEX 2
+PORTD_INDEX 3
+PORTE_INDEX 4
+]
+"9 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\Application.c
+[e E2816 . `uc
+PORTA_INDEX 0
+PORTB_INDEX 1
+PORTC_INDEX 2
+PORTD_INDEX 3
+PORTE_INDEX 4
+]
+[e E2806 . `uc
+GPIO_PIN0 0
+GPIO_PIN1 1
+GPIO_PIN2 2
+GPIO_PIN3 3
+GPIO_PIN4 4
+GPIO_PIN5 5
+GPIO_PIN6 6
+GPIO_PIN7 7
+]
+[e E2802 . `uc
+GPIO_OUTPUT 0
+GPIO_INPUT 1
+]
+[e E2798 . `uc
+GPIO_LOW 0
+GPIO_HIGH 1
+]
+"16
 [v _main main `(i  1 e 2 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
@@ -29,8 +73,38 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"8 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\Application.c
+"53 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4620.h
+[v _PORTA PORTA `VEuc  1 e 1 @3968 ]
+"190
+[v _PORTB PORTB `VEuc  1 e 1 @3969 ]
+"361
+[v _PORTC PORTC `VEuc  1 e 1 @3970 ]
+"536
+[v _PORTD PORTD `VEuc  1 e 1 @3971 ]
+"678
+[v _PORTE PORTE `VEuc  1 e 1 @3972 ]
+"881
+[v _LATA LATA `VEuc  1 e 1 @3977 ]
+"993
+[v _LATB LATB `VEuc  1 e 1 @3978 ]
+"1105
+[v _LATC LATC `VEuc  1 e 1 @3979 ]
+"1217
+[v _LATD LATD `VEuc  1 e 1 @3980 ]
+"1329
+[v _LATE LATE `VEuc  1 e 1 @3981 ]
+"1381
+[v _TRISA TRISA `VEuc  1 e 1 @3986 ]
+"1603
+[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
+"1825
+[v _TRISC TRISC `VEuc  1 e 1 @3988 ]
+"2047
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+"2269
+[v _TRISE TRISE `VEuc  1 e 1 @3990 ]
+"16 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\Application.c
 [v _main main `(i  1 e 2 0 ]
 {
-"11
+"19
 } 0

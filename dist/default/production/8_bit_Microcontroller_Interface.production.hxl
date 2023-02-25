@@ -10,11 +10,13 @@
 ### Memory Usage ###
  Intel Hex-file ranges:
   0h - 3h		(dist/default/production\8_bit_Microcontroller_Interface.production.hex)
-  FFF6h - FFFFh		(dist/default/production\8_bit_Microcontroller_Interface.production.hex)
+  FFB6h - FFB9h		(dist/default/production\8_bit_Microcontroller_Interface.production.hex)
+  FFBBh - FFFFh		(dist/default/production\8_bit_Microcontroller_Interface.production.hex)
   200000h - 200007h		(dist/default/production\8_bit_Microcontroller_Interface.production.hex)
   300000h - 30000Dh		(dist/default/production\8_bit_Microcontroller_Interface.production.hex)
  Unused ranges:
-  4h - FFF5h
+  4h - FFB5h
+  FFBAh - FFBAh
   10000h - 1FFFFFh
   200008h - 2FFFFFh
 
@@ -27,7 +29,11 @@
 ----------------------------------------------------------
 00000000 | H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- -- -- --
 ----------------------------------------------------------
-0000FFF0 | -- -- -- -- -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+0000FFB0 | -- -- -- -- -- -- H1 H1 H1 H1 -- H1 H1 H1 H1 H1
+0000FFC0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+0000FFD0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+0000FFE0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+0000FFF0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 ----------------------------------------------------------
 00200000 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- --
 ----------------------------------------------------------

@@ -14,9 +14,9 @@
 
 
 # 1 "ECU_LAYER/LED/ECU_LED.h" 1
-# 11 "ECU_LAYER/LED/ECU_LED.h"
+# 14 "ECU_LAYER/LED/ECU_LED.h"
 # 1 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/HAL_GPIO.h" 1
-# 11 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/HAL_GPIO.h"
+# 13 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/HAL_GPIO.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\proc\\../../../pic/include/proc/pic18f4620.h" 1 3
 # 45 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\proc\\../../../pic/include/proc/pic18f4620.h" 3
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\__at.h" 1 3
@@ -4229,10 +4229,10 @@ extern volatile __bit nWR __attribute__((address(0x7C21)));
 
 
 extern volatile __bit nWRITE __attribute__((address(0x7E3A)));
-# 11 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/HAL_GPIO.h" 2
+# 13 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/HAL_GPIO.h" 2
 
 # 1 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../MCAL_STD_TYPES.h" 1
-# 10 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../MCAL_STD_TYPES.h"
+# 13 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../MCAL_STD_TYPES.h"
 # 1 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../COMPILER.h" 1
 # 11 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../COMPILER.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\xc.h" 1 3
@@ -4490,10 +4490,10 @@ unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\xc.h" 2 3
 # 11 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../COMPILER.h" 2
-# 10 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../MCAL_STD_TYPES.h" 2
+# 13 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../MCAL_STD_TYPES.h" 2
 
 # 1 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../STD_LIBRARIES.h" 1
-# 11 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../STD_LIBRARIES.h"
+# 13 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../STD_LIBRARIES.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 1 3
@@ -4638,12 +4638,71 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 11 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../STD_LIBRARIES.h" 2
-# 11 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../MCAL_STD_TYPES.h" 2
-# 12 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/HAL_GPIO.h" 2
+# 13 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../STD_LIBRARIES.h" 2
+# 14 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../MCAL_STD_TYPES.h" 2
+
+
+
+
+typedef unsigned char uint8_t ;
+typedef unsigned short uint16_t ;
+typedef unsigned long uint32_t ;
+typedef signed char sint8_t ;
+typedef signed short sint16_t ;
+typedef signed long sint32_t ;
+
+typedef uint8_t Std_ReturnType ;
+# 14 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/HAL_GPIO.h" 2
 
 # 1 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../DEVICE_CONFIG.h" 1
-# 13 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/HAL_GPIO.h" 2
-# 11 "ECU_LAYER/LED/ECU_LED.h" 2
+# 15 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/HAL_GPIO.h" 2
+# 33 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/HAL_GPIO.h"
+typedef enum {
+    GPIO_LOW = 0,
+    GPIO_HIGH
+}logic_t;
+typedef enum{
+    GPIO_OUTPUT = 0,
+    GPIO_INPUT
+}direction_t;
+typedef enum{
+    GPIO_PIN0 = 0,
+    GPIO_PIN1,
+    GPIO_PIN2,
+    GPIO_PIN3,
+    GPIO_PIN4,
+    GPIO_PIN5,
+    GPIO_PIN6,
+    GPIO_PIN7,
+
+}pinIndex_t;
+typedef enum{
+    PORTA_INDEX = 0,
+    PORTB_INDEX,
+    PORTC_INDEX,
+    PORTD_INDEX,
+    PORTE_INDEX,
+}portIndex_t;
+
+typedef struct{
+    uint8_t Port : 3 ;
+    uint8_t Pin_Number : 3 ;
+    uint8_t Direction : 1 ;
+    uint8_t Logic : 1 ;
+}pinConfig_t;
+
+
+Std_ReturnType gpio_pin_direction_init(const pinConfig_t *_pin_config);
+Std_ReturnType gpio_pin_get_direction_status(const pinConfig_t *_pin_config,direction_t *direction_status);
+Std_ReturnType gpio_pin_write_logic(const pinConfig_t *_pin_config,logic_t logic);
+Std_ReturnType gpio_pin_read_logic(const pinConfig_t *_pin_config,logic_t *logic);
+Std_ReturnType gpio_pin_toggle_logic(const pinConfig_t *_pin_config);
+
+Std_ReturnType gpio_port_direction_init(portIndex_t port, uint8_t direction);
+Std_ReturnType gpio_port_get_direction_status(portIndex_t port,uint8_t *direction_status);
+Std_ReturnType gpio_port_write_logic(portIndex_t port,uint8_t logic);
+Std_ReturnType gpio_port_read_logic(portIndex_t port,uint8_t *logic);
+Std_ReturnType gpio_port_toggle_logic(portIndex_t port);
+# 14 "ECU_LAYER/LED/ECU_LED.h" 2
 # 7 "ECU_LAYER/LED/ECU_LED.c" 2
 

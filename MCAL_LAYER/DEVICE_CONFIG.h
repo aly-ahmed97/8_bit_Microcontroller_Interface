@@ -8,7 +8,15 @@
 #ifndef DEVICE_CONFIG_H
 #define	DEVICE_CONFIG_H
 
+/* Includes Section : */
 
+/* Macro Declarations Section : */
+
+/* Macro Functions Declarations Section : */
+
+/* Data Types Section*/
+
+/* Functions Declarations Section */
 
 #endif	/* DEVICE_CONFIG_H */
 
