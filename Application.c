@@ -6,14 +6,15 @@
  */
 #include "ECU_LAYER/LED/ECU_LED.h"
 
-pinConfig_t led_1 = {
-  .Port = PORTC_INDEX,
-  .Pin_Number  = GPIO_PIN0,
-  .Direction = GPIO_OUTPUT,
-  .Logic = GPIO_HIGH
-};
 
 int main() {
-    
+    Std_ReturnType ret = E_NOT_OK ;
+    ret = gpio_port_direction_init(PORTC_INDEX,0);
+    ret = gpio_port_write_logic(PORTC_INDEX,0x55);
+    while(1)
+    {
+        ret = gpio_port_toggle_logic(PORTC_INDEX);
+        __delay_ms(500);
+    }
     return (EXIT_SUCCESS);
 }   

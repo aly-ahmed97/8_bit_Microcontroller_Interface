@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=ECU_LAYER/LED/ECU_LED.c MCAL_LAYER/GPIO/HAL_GPIO.c Application.c MCAL_LAYER/DEVIC_CONFIG.c
+SOURCEFILES_QUOTED_IF_SPACED=ECU_LAYER/LED/ECU_LED.c MCAL_LAYER/GPIO/HAL_GPIO.c MCAL_LAYER/DEVIC_CONFIG.c Application.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/ECU_LAYER/LED/ECU_LED.p1 ${OBJECTDIR}/MCAL_LAYER/GPIO/HAL_GPIO.p1 ${OBJECTDIR}/Application.p1 ${OBJECTDIR}/MCAL_LAYER/DEVIC_CONFIG.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/ECU_LAYER/LED/ECU_LED.p1.d ${OBJECTDIR}/MCAL_LAYER/GPIO/HAL_GPIO.p1.d ${OBJECTDIR}/Application.p1.d ${OBJECTDIR}/MCAL_LAYER/DEVIC_CONFIG.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/ECU_LAYER/LED/ECU_LED.p1 ${OBJECTDIR}/MCAL_LAYER/GPIO/HAL_GPIO.p1 ${OBJECTDIR}/MCAL_LAYER/DEVIC_CONFIG.p1 ${OBJECTDIR}/Application.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/ECU_LAYER/LED/ECU_LED.p1.d ${OBJECTDIR}/MCAL_LAYER/GPIO/HAL_GPIO.p1.d ${OBJECTDIR}/MCAL_LAYER/DEVIC_CONFIG.p1.d ${OBJECTDIR}/Application.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/ECU_LAYER/LED/ECU_LED.p1 ${OBJECTDIR}/MCAL_LAYER/GPIO/HAL_GPIO.p1 ${OBJECTDIR}/Application.p1 ${OBJECTDIR}/MCAL_LAYER/DEVIC_CONFIG.p1
+OBJECTFILES=${OBJECTDIR}/ECU_LAYER/LED/ECU_LED.p1 ${OBJECTDIR}/MCAL_LAYER/GPIO/HAL_GPIO.p1 ${OBJECTDIR}/MCAL_LAYER/DEVIC_CONFIG.p1 ${OBJECTDIR}/Application.p1
 
 # Source Files
-SOURCEFILES=ECU_LAYER/LED/ECU_LED.c MCAL_LAYER/GPIO/HAL_GPIO.c Application.c MCAL_LAYER/DEVIC_CONFIG.c
+SOURCEFILES=ECU_LAYER/LED/ECU_LED.c MCAL_LAYER/GPIO/HAL_GPIO.c MCAL_LAYER/DEVIC_CONFIG.c Application.c
 
 
 
@@ -92,7 +92,7 @@ ${OBJECTDIR}/ECU_LAYER/LED/ECU_LED.p1: ECU_LAYER/LED/ECU_LED.c  nbproject/Makefi
 	@${MKDIR} "${OBJECTDIR}/ECU_LAYER/LED" 
 	@${RM} ${OBJECTDIR}/ECU_LAYER/LED/ECU_LED.p1.d 
 	@${RM} ${OBJECTDIR}/ECU_LAYER/LED/ECU_LED.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/ECU_LAYER/LED/ECU_LED.p1 ECU_LAYER/LED/ECU_LED.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gcoff -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/ECU_LAYER/LED/ECU_LED.p1 ECU_LAYER/LED/ECU_LED.c 
 	@-${MV} ${OBJECTDIR}/ECU_LAYER/LED/ECU_LED.d ${OBJECTDIR}/ECU_LAYER/LED/ECU_LED.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/ECU_LAYER/LED/ECU_LED.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
@@ -100,32 +100,32 @@ ${OBJECTDIR}/MCAL_LAYER/GPIO/HAL_GPIO.p1: MCAL_LAYER/GPIO/HAL_GPIO.c  nbproject/
 	@${MKDIR} "${OBJECTDIR}/MCAL_LAYER/GPIO" 
 	@${RM} ${OBJECTDIR}/MCAL_LAYER/GPIO/HAL_GPIO.p1.d 
 	@${RM} ${OBJECTDIR}/MCAL_LAYER/GPIO/HAL_GPIO.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/MCAL_LAYER/GPIO/HAL_GPIO.p1 MCAL_LAYER/GPIO/HAL_GPIO.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gcoff -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/MCAL_LAYER/GPIO/HAL_GPIO.p1 MCAL_LAYER/GPIO/HAL_GPIO.c 
 	@-${MV} ${OBJECTDIR}/MCAL_LAYER/GPIO/HAL_GPIO.d ${OBJECTDIR}/MCAL_LAYER/GPIO/HAL_GPIO.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/MCAL_LAYER/GPIO/HAL_GPIO.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/Application.p1: Application.c  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/Application.p1.d 
-	@${RM} ${OBJECTDIR}/Application.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Application.p1 Application.c 
-	@-${MV} ${OBJECTDIR}/Application.d ${OBJECTDIR}/Application.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/Application.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 ${OBJECTDIR}/MCAL_LAYER/DEVIC_CONFIG.p1: MCAL_LAYER/DEVIC_CONFIG.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/MCAL_LAYER" 
 	@${RM} ${OBJECTDIR}/MCAL_LAYER/DEVIC_CONFIG.p1.d 
 	@${RM} ${OBJECTDIR}/MCAL_LAYER/DEVIC_CONFIG.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/MCAL_LAYER/DEVIC_CONFIG.p1 MCAL_LAYER/DEVIC_CONFIG.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gcoff -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/MCAL_LAYER/DEVIC_CONFIG.p1 MCAL_LAYER/DEVIC_CONFIG.c 
 	@-${MV} ${OBJECTDIR}/MCAL_LAYER/DEVIC_CONFIG.d ${OBJECTDIR}/MCAL_LAYER/DEVIC_CONFIG.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/MCAL_LAYER/DEVIC_CONFIG.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/Application.p1: Application.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Application.p1.d 
+	@${RM} ${OBJECTDIR}/Application.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gcoff -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Application.p1 Application.c 
+	@-${MV} ${OBJECTDIR}/Application.d ${OBJECTDIR}/Application.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Application.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 else
 ${OBJECTDIR}/ECU_LAYER/LED/ECU_LED.p1: ECU_LAYER/LED/ECU_LED.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/ECU_LAYER/LED" 
 	@${RM} ${OBJECTDIR}/ECU_LAYER/LED/ECU_LED.p1.d 
 	@${RM} ${OBJECTDIR}/ECU_LAYER/LED/ECU_LED.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/ECU_LAYER/LED/ECU_LED.p1 ECU_LAYER/LED/ECU_LED.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gcoff -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/ECU_LAYER/LED/ECU_LED.p1 ECU_LAYER/LED/ECU_LED.c 
 	@-${MV} ${OBJECTDIR}/ECU_LAYER/LED/ECU_LED.d ${OBJECTDIR}/ECU_LAYER/LED/ECU_LED.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/ECU_LAYER/LED/ECU_LED.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
@@ -133,25 +133,25 @@ ${OBJECTDIR}/MCAL_LAYER/GPIO/HAL_GPIO.p1: MCAL_LAYER/GPIO/HAL_GPIO.c  nbproject/
 	@${MKDIR} "${OBJECTDIR}/MCAL_LAYER/GPIO" 
 	@${RM} ${OBJECTDIR}/MCAL_LAYER/GPIO/HAL_GPIO.p1.d 
 	@${RM} ${OBJECTDIR}/MCAL_LAYER/GPIO/HAL_GPIO.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/MCAL_LAYER/GPIO/HAL_GPIO.p1 MCAL_LAYER/GPIO/HAL_GPIO.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gcoff -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/MCAL_LAYER/GPIO/HAL_GPIO.p1 MCAL_LAYER/GPIO/HAL_GPIO.c 
 	@-${MV} ${OBJECTDIR}/MCAL_LAYER/GPIO/HAL_GPIO.d ${OBJECTDIR}/MCAL_LAYER/GPIO/HAL_GPIO.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/MCAL_LAYER/GPIO/HAL_GPIO.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/Application.p1: Application.c  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/Application.p1.d 
-	@${RM} ${OBJECTDIR}/Application.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Application.p1 Application.c 
-	@-${MV} ${OBJECTDIR}/Application.d ${OBJECTDIR}/Application.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/Application.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 ${OBJECTDIR}/MCAL_LAYER/DEVIC_CONFIG.p1: MCAL_LAYER/DEVIC_CONFIG.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/MCAL_LAYER" 
 	@${RM} ${OBJECTDIR}/MCAL_LAYER/DEVIC_CONFIG.p1.d 
 	@${RM} ${OBJECTDIR}/MCAL_LAYER/DEVIC_CONFIG.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/MCAL_LAYER/DEVIC_CONFIG.p1 MCAL_LAYER/DEVIC_CONFIG.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gcoff -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/MCAL_LAYER/DEVIC_CONFIG.p1 MCAL_LAYER/DEVIC_CONFIG.c 
 	@-${MV} ${OBJECTDIR}/MCAL_LAYER/DEVIC_CONFIG.d ${OBJECTDIR}/MCAL_LAYER/DEVIC_CONFIG.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/MCAL_LAYER/DEVIC_CONFIG.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/Application.p1: Application.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Application.p1.d 
+	@${RM} ${OBJECTDIR}/Application.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gcoff -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Application.p1 Application.c 
+	@-${MV} ${OBJECTDIR}/Application.d ${OBJECTDIR}/Application.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Application.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 
@@ -172,13 +172,13 @@ endif
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 ${DISTDIR}/8_bit_Microcontroller_Interface.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk    
 	@${MKDIR} ${DISTDIR} 
-	${MP_CC} $(MP_EXTRA_LD_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -Wl,-Map=${DISTDIR}/8_bit_Microcontroller_Interface.${IMAGE_TYPE}.map  -D__DEBUG=1  -mdebugger=none  -DXPRJ_default=$(CND_CONF)  -Wl,--defsym=__MPLAB_BUILD=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto        $(COMPARISON_BUILD) -Wl,--memorysummary,${DISTDIR}/memoryfile.xml -o ${DISTDIR}/8_bit_Microcontroller_Interface.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}     
+	${MP_CC} $(MP_EXTRA_LD_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -Wl,-Map=${DISTDIR}/8_bit_Microcontroller_Interface.${IMAGE_TYPE}.map  -D__DEBUG=1  -mdebugger=none  -DXPRJ_default=$(CND_CONF)  -Wl,--defsym=__MPLAB_BUILD=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits -std=c99 -gcoff -mstack=compiled:auto:auto:auto        $(COMPARISON_BUILD) -Wl,--memorysummary,${DISTDIR}/memoryfile.xml -o ${DISTDIR}/8_bit_Microcontroller_Interface.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}     
 	@${RM} ${DISTDIR}/8_bit_Microcontroller_Interface.${IMAGE_TYPE}.hex 
 	
 else
 ${DISTDIR}/8_bit_Microcontroller_Interface.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   
 	@${MKDIR} ${DISTDIR} 
-	${MP_CC} $(MP_EXTRA_LD_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -Wl,-Map=${DISTDIR}/8_bit_Microcontroller_Interface.${IMAGE_TYPE}.map  -DXPRJ_default=$(CND_CONF)  -Wl,--defsym=__MPLAB_BUILD=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     $(COMPARISON_BUILD) -Wl,--memorysummary,${DISTDIR}/memoryfile.xml -o ${DISTDIR}/8_bit_Microcontroller_Interface.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}     
+	${MP_CC} $(MP_EXTRA_LD_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -Wl,-Map=${DISTDIR}/8_bit_Microcontroller_Interface.${IMAGE_TYPE}.map  -DXPRJ_default=$(CND_CONF)  -Wl,--defsym=__MPLAB_BUILD=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits -std=c99 -gcoff -mstack=compiled:auto:auto:auto     $(COMPARISON_BUILD) -Wl,--memorysummary,${DISTDIR}/memoryfile.xml -o ${DISTDIR}/8_bit_Microcontroller_Interface.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}     
 	
 endif
 

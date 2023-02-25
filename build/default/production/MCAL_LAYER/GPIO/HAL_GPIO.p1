@@ -29,20 +29,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _LATD `Vuc ~T0 @X0 0 e@3980 ]
 "1329
 [v _LATE `Vuc ~T0 @X0 0 e@3981 ]
-"60 MCAL_LAYER/GPIO/HAL_GPIO.h
-[; ;MCAL_LAYER/GPIO/HAL_GPIO.h: 60: typedef struct{
+"66 MCAL_LAYER/GPIO/HAL_GPIO.h
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.h: 66: typedef struct{
 [s S272 :3 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S272 . Port Pin_Number Direction Logic ]
-"17 MCAL_LAYER/GPIO/HAL_GPIO.c
-[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 17: Std_ReturnType gpio_pin_get_direction_status(const pinConfig_t *_pin_config,direction_t *direction_status){
+"44 MCAL_LAYER/GPIO/HAL_GPIO.c
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 44:         }
 [c E2802 0 1 .. ]
 [n E2802 . GPIO_OUTPUT GPIO_INPUT  ]
-"20
-[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 20: Std_ReturnType gpio_pin_write_logic(const pinConfig_t *_pin_config,logic_t logic){
+"84
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 84: Std_ReturnType gpio_pin_write_logic(const pinConfig_t *_pin_config,logic_t logic){
 [c E2798 0 1 .. ]
 [n E2798 . GPIO_LOW GPIO_HIGH  ]
-"30
-[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 30: Std_ReturnType gpio_port_direction_init(portIndex_t port, uint8_t direction){
+"199
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 199: Std_ReturnType gpio_port_direction_init(portIndex_t port, uint8_t direction){
 [c E2816 0 1 2 3 4 .. ]
 [n E2816 . PORTA_INDEX PORTB_INDEX PORTC_INDEX PORTD_INDEX PORTE_INDEX  ]
 "55 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4620.h
@@ -355,120 +355,676 @@ Version 4.0 HI-TECH Software Intermediate Code
 &U _LATE
 ..
 ]
-"14
-[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 14: Std_ReturnType gpio_pin_direction_init(const pinConfig_t *_pin_config){
+"22
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 22: Std_ReturnType gpio_pin_direction_init(const pinConfig_t *_pin_config){
 [v _gpio_pin_direction_init `(uc ~T0 @X0 1 ef1`*CS272 ]
 {
 [e :U _gpio_pin_direction_init ]
 [v __pin_config `*CS272 ~T0 @X0 1 r1 ]
 [f ]
-"16
-[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 16: }
+"23
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 23:     Std_ReturnType ret = (Std_ReturnType)0x01 ;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 1 `i `uc ]
+"24
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 24:     if(((void*)0) == _pin_config)
+[e $ ! == -> -> -> 0 `i `*v `*CS272 __pin_config 274  ]
+"25
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 25:     {
+{
+"26
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 26:        ret = (Std_ReturnType)0x00 ;
+[e = _ret -> -> 0 `i `uc ]
+"27
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 27:     }
+}
+[e $U 275  ]
+"28
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 28:     else if(_pin_config->Pin_Number > 0x08 -1 || _pin_config->Port >= 0x05 -1)
+[e :U 274 ]
+[e $ ! || > -> . *U __pin_config 1 `i - -> 8 `i -> 1 `i >= -> . *U __pin_config 0 `i - -> 5 `i -> 1 `i 276  ]
+"29
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 29:     {
+{
+"30
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 30:         ret = (Std_ReturnType)0x00 ;
+[e = _ret -> -> 0 `i `uc ]
+"31
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 31:     }
+}
+[e $U 277  ]
+"32
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 32:     else
+[e :U 276 ]
+"33
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 33:     {
+{
+"34
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 34:         switch(_pin_config->Direction)
+[e $U 279  ]
+"35
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 35:         {
+{
+"36
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 36:             case (GPIO_OUTPUT) :
+[e :U 280 ]
+"37
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 37:                 (*tris_registers[_pin_config->Port] &= ~((uint8_t)1<<_pin_config->Pin_Number));
+[e =& *U *U + &U _tris_registers * -> . *U __pin_config 0 `ux -> -> # *U &U _tris_registers `ui `ux -> ~ << -> -> -> 1 `i `uc `i -> . *U __pin_config 1 `i `uc ]
+"38
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 38:                 break;
+[e $U 278  ]
+"39
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 39:             case (GPIO_INPUT) :
+[e :U 281 ]
+"40
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 40:                 (*tris_registers[_pin_config->Port] |= ((uint8_t)1<<_pin_config->Pin_Number));
+[e =| *U *U + &U _tris_registers * -> . *U __pin_config 0 `ux -> -> # *U &U _tris_registers `ui `ux -> << -> -> -> 1 `i `uc `i -> . *U __pin_config 1 `i `uc ]
+"41
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 41:                 break;
+[e $U 278  ]
+"42
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 42:             default :
+[e :U 282 ]
+"43
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 43:                 ret = (Std_ReturnType)0x00 ;
+[e = _ret -> -> 0 `i `uc ]
+"44
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 44:         }
+}
+[e $U 278  ]
+[e :U 279 ]
+[e [\ -> . *U __pin_config 2 `i , $ . `E2802 0 280
+ , $ . `E2802 1 281
+ 282 ]
+[e :U 278 ]
+"45
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 45:     }
+}
+[e :U 277 ]
+[e :U 275 ]
+"46
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 46:     return ret ;
+[e ) _ret ]
+[e $UE 273  ]
+"47
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 47: }
 [e :UE 273 ]
 }
-"17
-[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 17: Std_ReturnType gpio_pin_get_direction_status(const pinConfig_t *_pin_config,direction_t *direction_status){
+"58
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 58: Std_ReturnType gpio_pin_get_direction_status(const pinConfig_t *_pin_config,direction_t *direction_status){
 [v _gpio_pin_get_direction_status `(uc ~T0 @X0 1 ef2`*CS272`*E2802 ]
 {
 [e :U _gpio_pin_get_direction_status ]
 [v __pin_config `*CS272 ~T0 @X0 1 r1 ]
 [v _direction_status `*E2802 ~T0 @X0 1 r2 ]
 [f ]
-"19
-[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 19: }
-[e :UE 274 ]
+"59
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 59:     Std_ReturnType ret = (Std_ReturnType)0x01 ;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 1 `i `uc ]
+"60
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 60:     if(((void*)0) == _pin_config || ((void*)0) == direction_status)
+[e $ ! || == -> -> -> 0 `i `*v `*CS272 __pin_config == -> -> -> 0 `i `*v `*E2802 _direction_status 284  ]
+"61
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 61:     {
+{
+"62
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 62:        ret = (Std_ReturnType)0x00 ;
+[e = _ret -> -> 0 `i `uc ]
+"63
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 63:     }
 }
-"20
-[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 20: Std_ReturnType gpio_pin_write_logic(const pinConfig_t *_pin_config,logic_t logic){
+[e $U 285  ]
+"64
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 64:     else if(_pin_config->Pin_Number > 0x08 -1 || _pin_config->Port >= 0x05 -1)
+[e :U 284 ]
+[e $ ! || > -> . *U __pin_config 1 `i - -> 8 `i -> 1 `i >= -> . *U __pin_config 0 `i - -> 5 `i -> 1 `i 286  ]
+"65
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 65:     {
+{
+"66
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 66:         ret = (Std_ReturnType)0x00 ;
+[e = _ret -> -> 0 `i `uc ]
+"67
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 67:     }
+}
+[e $U 287  ]
+"68
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 68:     else
+[e :U 286 ]
+"69
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 69:     {
+{
+"70
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 70:         *direction_status = ((*tris_registers[_pin_config->Port] >> _pin_config->Pin_Number) & (uint8_t)1);
+[e = *U _direction_status -> & >> -> *U *U + &U _tris_registers * -> . *U __pin_config 0 `ux -> -> # *U &U _tris_registers `ui `ux `i -> . *U __pin_config 1 `i -> -> -> 1 `i `uc `i `E2802 ]
+"71
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 71:     }
+}
+[e :U 287 ]
+[e :U 285 ]
+"72
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 72:     return ret ;
+[e ) _ret ]
+[e $UE 283  ]
+"73
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 73: }
+[e :UE 283 ]
+}
+"84
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 84: Std_ReturnType gpio_pin_write_logic(const pinConfig_t *_pin_config,logic_t logic){
 [v _gpio_pin_write_logic `(uc ~T0 @X0 1 ef2`*CS272`E2798 ]
 {
 [e :U _gpio_pin_write_logic ]
 [v __pin_config `*CS272 ~T0 @X0 1 r1 ]
 [v _logic `E2798 ~T0 @X0 1 r2 ]
 [f ]
-"22
-[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 22: }
-[e :UE 275 ]
+"85
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 85:     Std_ReturnType ret = (Std_ReturnType)0x01 ;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 1 `i `uc ]
+"86
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 86:     if(((void*)0) == _pin_config)
+[e $ ! == -> -> -> 0 `i `*v `*CS272 __pin_config 289  ]
+"87
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 87:     {
+{
+"88
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 88:        ret = (Std_ReturnType)0x00 ;
+[e = _ret -> -> 0 `i `uc ]
+"89
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 89:     }
 }
-"23
-[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 23: Std_ReturnType gpio_pin_read_logic(const pinConfig_t *_pin_config,logic_t *logic){
+[e $U 290  ]
+"90
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 90:     else if(_pin_config->Pin_Number > 0x08 -1 || _pin_config->Port >= 0x05 -1)
+[e :U 289 ]
+[e $ ! || > -> . *U __pin_config 1 `i - -> 8 `i -> 1 `i >= -> . *U __pin_config 0 `i - -> 5 `i -> 1 `i 291  ]
+"91
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 91:     {
+{
+"92
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 92:         ret = (Std_ReturnType)0x00 ;
+[e = _ret -> -> 0 `i `uc ]
+"93
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 93:     }
+}
+[e $U 292  ]
+"94
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 94:     else
+[e :U 291 ]
+"95
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 95:     {
+{
+"96
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 96:         switch(logic)
+[e $U 294  ]
+"97
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 97:         {
+{
+"98
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 98:             case (GPIO_LOW) :
+[e :U 295 ]
+"99
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 99:                 (*lat_registers[_pin_config->Port] &= ~((uint8_t)1<<_pin_config->Pin_Number));
+[e =& *U *U + &U _lat_registers * -> . *U __pin_config 0 `ux -> -> # *U &U _lat_registers `ui `ux -> ~ << -> -> -> 1 `i `uc `i -> . *U __pin_config 1 `i `uc ]
+"100
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 100:                 break;
+[e $U 293  ]
+"101
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 101:             case (GPIO_HIGH) :
+[e :U 296 ]
+"102
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 102:                 (*lat_registers[_pin_config->Port] |= ((uint8_t)1<<_pin_config->Pin_Number));
+[e =| *U *U + &U _lat_registers * -> . *U __pin_config 0 `ux -> -> # *U &U _lat_registers `ui `ux -> << -> -> -> 1 `i `uc `i -> . *U __pin_config 1 `i `uc ]
+"103
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 103:                 break;
+[e $U 293  ]
+"104
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 104:             default :
+[e :U 297 ]
+"105
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 105:                 ret = (Std_ReturnType)0x00 ;
+[e = _ret -> -> 0 `i `uc ]
+"106
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 106:         }
+}
+[e $U 293  ]
+[e :U 294 ]
+[e [\ -> _logic `ui , $ -> . `E2798 0 `ui 295
+ , $ -> . `E2798 1 `ui 296
+ 297 ]
+[e :U 293 ]
+"107
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 107:     }
+}
+[e :U 292 ]
+[e :U 290 ]
+"108
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 108:     return ret ;
+[e ) _ret ]
+[e $UE 288  ]
+"109
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 109: }
+[e :UE 288 ]
+}
+"120
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 120: Std_ReturnType gpio_pin_read_logic(const pinConfig_t *_pin_config,logic_t *logic){
 [v _gpio_pin_read_logic `(uc ~T0 @X0 1 ef2`*CS272`*E2798 ]
 {
 [e :U _gpio_pin_read_logic ]
 [v __pin_config `*CS272 ~T0 @X0 1 r1 ]
 [v _logic `*E2798 ~T0 @X0 1 r2 ]
 [f ]
-"25
-[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 25: }
-[e :UE 276 ]
+"121
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 121:     Std_ReturnType ret = (Std_ReturnType)0x01 ;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 1 `i `uc ]
+"122
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 122:     if(((void*)0) == _pin_config || ((void*)0) == logic)
+[e $ ! || == -> -> -> 0 `i `*v `*CS272 __pin_config == -> -> -> 0 `i `*v `*E2798 _logic 299  ]
+"123
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 123:     {
+{
+"124
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 124:        ret = (Std_ReturnType)0x00 ;
+[e = _ret -> -> 0 `i `uc ]
+"125
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 125:     }
 }
-"26
-[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 26: Std_ReturnType gpio_pin_toggle_logic(const pinConfig_t *_pin_config){
+[e $U 300  ]
+"126
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 126:     else if(_pin_config->Pin_Number > 0x08 -1 || _pin_config->Port >= 0x05 -1)
+[e :U 299 ]
+[e $ ! || > -> . *U __pin_config 1 `i - -> 8 `i -> 1 `i >= -> . *U __pin_config 0 `i - -> 5 `i -> 1 `i 301  ]
+"127
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 127:     {
+{
+"128
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 128:         ret = (Std_ReturnType)0x00 ;
+[e = _ret -> -> 0 `i `uc ]
+"129
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 129:     }
+}
+[e $U 302  ]
+"130
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 130:     else
+[e :U 301 ]
+"131
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 131:     {
+{
+"132
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 132:         *logic = ((*port_registers[_pin_config->Port] >> _pin_config->Pin_Number) & (uint8_t)1);
+[e = *U _logic -> & >> -> *U *U + &U _port_registers * -> . *U __pin_config 0 `ux -> -> # *U &U _port_registers `ui `ux `i -> . *U __pin_config 1 `i -> -> -> 1 `i `uc `i `E2798 ]
+"133
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 133:     }
+}
+[e :U 302 ]
+[e :U 300 ]
+"134
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 134:     return ret ;
+[e ) _ret ]
+[e $UE 298  ]
+"135
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 135: }
+[e :UE 298 ]
+}
+"145
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 145: Std_ReturnType gpio_pin_toggle_logic(const pinConfig_t *_pin_config){
 [v _gpio_pin_toggle_logic `(uc ~T0 @X0 1 ef1`*CS272 ]
 {
 [e :U _gpio_pin_toggle_logic ]
 [v __pin_config `*CS272 ~T0 @X0 1 r1 ]
 [f ]
-"28
-[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 28: }
-[e :UE 277 ]
+"146
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 146:     Std_ReturnType ret = (Std_ReturnType)0x01 ;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 1 `i `uc ]
+"147
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 147:     if(((void*)0) == _pin_config)
+[e $ ! == -> -> -> 0 `i `*v `*CS272 __pin_config 304  ]
+"148
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 148:     {
+{
+"149
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 149:        ret = (Std_ReturnType)0x00 ;
+[e = _ret -> -> 0 `i `uc ]
+"150
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 150:     }
 }
-"30
-[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 30: Std_ReturnType gpio_port_direction_init(portIndex_t port, uint8_t direction){
+[e $U 305  ]
+"151
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 151:     else if(_pin_config->Pin_Number > 0x08 -1 || _pin_config->Port >= 0x05 -1)
+[e :U 304 ]
+[e $ ! || > -> . *U __pin_config 1 `i - -> 8 `i -> 1 `i >= -> . *U __pin_config 0 `i - -> 5 `i -> 1 `i 306  ]
+"152
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 152:     {
+{
+"153
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 153:        ret = (Std_ReturnType)0x00 ;
+[e = _ret -> -> 0 `i `uc ]
+"154
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 154:     }
+}
+[e $U 307  ]
+"155
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 155:     else
+[e :U 306 ]
+"156
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 156:     {
+{
+"157
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 157:         (*lat_registers[_pin_config->Port] ^= ((uint8_t)1<<_pin_config->Pin_Number));
+[e =^ *U *U + &U _lat_registers * -> . *U __pin_config 0 `ux -> -> # *U &U _lat_registers `ui `ux -> << -> -> -> 1 `i `uc `i -> . *U __pin_config 1 `i `uc ]
+"158
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 158:     }
+}
+[e :U 307 ]
+[e :U 305 ]
+"159
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 159:     return ret ;
+[e ) _ret ]
+[e $UE 303  ]
+"160
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 160: }
+[e :UE 303 ]
+}
+"170
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 170: Std_ReturnType gpio_pin_init(const pinConfig_t *_pin_config)
+[v _gpio_pin_init `(uc ~T0 @X0 1 ef1`*CS272 ]
+"171
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 171: {
+{
+[e :U _gpio_pin_init ]
+"170
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 170: Std_ReturnType gpio_pin_init(const pinConfig_t *_pin_config)
+[v __pin_config `*CS272 ~T0 @X0 1 r1 ]
+"171
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 171: {
+[f ]
+"172
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 172:     Std_ReturnType ret = (Std_ReturnType)0x01 ;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 1 `i `uc ]
+"173
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 173:     if(((void*)0) == _pin_config)
+[e $ ! == -> -> -> 0 `i `*v `*CS272 __pin_config 309  ]
+"174
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 174:     {
+{
+"175
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 175:        ret = (Std_ReturnType)0x00 ;
+[e = _ret -> -> 0 `i `uc ]
+"176
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 176:     }
+}
+[e $U 310  ]
+"177
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 177:     else if(_pin_config->Pin_Number > 0x08 -1 || _pin_config->Port >= 0x05 -1)
+[e :U 309 ]
+[e $ ! || > -> . *U __pin_config 1 `i - -> 8 `i -> 1 `i >= -> . *U __pin_config 0 `i - -> 5 `i -> 1 `i 311  ]
+"178
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 178:     {
+{
+"179
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 179:        ret = (Std_ReturnType)0x00 ;
+[e = _ret -> -> 0 `i `uc ]
+"180
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 180:     }
+}
+[e $U 312  ]
+"181
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 181:     else
+[e :U 311 ]
+"182
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 182:     {
+{
+"183
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 183:         ret = gpio_pin_direction_init(_pin_config);
+[e = _ret ( _gpio_pin_direction_init (1 __pin_config ]
+"184
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 184:         ret = gpio_pin_write_logic(_pin_config,_pin_config->Logic);
+[e = _ret ( _gpio_pin_write_logic (2 , __pin_config -> . *U __pin_config 3 `E2798 ]
+"185
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 185:     }
+}
+[e :U 312 ]
+[e :U 310 ]
+"186
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 186:     return ret ;
+[e ) _ret ]
+[e $UE 308  ]
+"187
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 187: }
+[e :UE 308 ]
+}
+"199
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 199: Std_ReturnType gpio_port_direction_init(portIndex_t port, uint8_t direction){
 [v _gpio_port_direction_init `(uc ~T0 @X0 1 ef2`E2816`uc ]
 {
 [e :U _gpio_port_direction_init ]
 [v _port `E2816 ~T0 @X0 1 r1 ]
 [v _direction `uc ~T0 @X0 1 r2 ]
 [f ]
-"32
-[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 32: }
-[e :UE 278 ]
+"200
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 200:     Std_ReturnType ret = (Std_ReturnType)0x01 ;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 1 `i `uc ]
+"201
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 201:     if(port > 0x05 -1)
+[e $ ! > -> _port `ui -> - -> 5 `i -> 1 `i `ui 314  ]
+"202
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 202:     {
+{
+"203
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 203:         ret = (Std_ReturnType)0x00 ;
+[e = _ret -> -> 0 `i `uc ]
+"204
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 204:     }
 }
-"33
-[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 33: Std_ReturnType gpio_port_get_direction_status(portIndex_t port,uint8_t *direction_status){
+[e $U 315  ]
+"205
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 205:     else
+[e :U 314 ]
+"206
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 206:     {
+{
+"207
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 207:         *tris_registers[port] = direction ;
+[e = *U *U + &U _tris_registers * -> _port `ux -> -> # *U &U _tris_registers `ui `ux _direction ]
+"208
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 208:     }
+}
+[e :U 315 ]
+"209
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 209:     return ret ;
+[e ) _ret ]
+[e $UE 313  ]
+"210
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 210: }
+[e :UE 313 ]
+}
+"221
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 221: Std_ReturnType gpio_port_get_direction_status(portIndex_t port,uint8_t *direction_status){
 [v _gpio_port_get_direction_status `(uc ~T0 @X0 1 ef2`E2816`*uc ]
 {
 [e :U _gpio_port_get_direction_status ]
 [v _port `E2816 ~T0 @X0 1 r1 ]
 [v _direction_status `*uc ~T0 @X0 1 r2 ]
 [f ]
-"35
-[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 35: }
-[e :UE 279 ]
+"222
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 222:     Std_ReturnType ret = (Std_ReturnType)0x01 ;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 1 `i `uc ]
+"223
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 223:     if(port > 0x05 -1 || ((void*)0) == direction_status)
+[e $ ! || > -> _port `ui -> - -> 5 `i -> 1 `i `ui == -> -> -> 0 `i `*v `*uc _direction_status 317  ]
+"224
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 224:     {
+{
+"225
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 225:         ret = (Std_ReturnType)0x00 ;
+[e = _ret -> -> 0 `i `uc ]
+"226
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 226:     }
 }
-"36
-[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 36: Std_ReturnType gpio_port_write_logic(portIndex_t port,uint8_t logic){
+[e $U 318  ]
+"227
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 227:     else
+[e :U 317 ]
+"228
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 228:     {
+{
+"229
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 229:         *direction_status = *tris_registers[port] ;
+[e = *U _direction_status *U *U + &U _tris_registers * -> _port `ux -> -> # *U &U _tris_registers `ui `ux ]
+"230
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 230:     }
+}
+[e :U 318 ]
+"231
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 231:     return ret ;
+[e ) _ret ]
+[e $UE 316  ]
+"232
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 232: }
+[e :UE 316 ]
+}
+"243
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 243: Std_ReturnType gpio_port_write_logic(portIndex_t port,uint8_t logic){
 [v _gpio_port_write_logic `(uc ~T0 @X0 1 ef2`E2816`uc ]
 {
 [e :U _gpio_port_write_logic ]
 [v _port `E2816 ~T0 @X0 1 r1 ]
 [v _logic `uc ~T0 @X0 1 r2 ]
 [f ]
-"38
-[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 38: }
-[e :UE 280 ]
+"244
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 244:     Std_ReturnType ret = (Std_ReturnType)0x01 ;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 1 `i `uc ]
+"245
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 245:     if(port > 0x05 -1)
+[e $ ! > -> _port `ui -> - -> 5 `i -> 1 `i `ui 320  ]
+"246
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 246:     {
+{
+"247
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 247:         ret = (Std_ReturnType)0x00 ;
+[e = _ret -> -> 0 `i `uc ]
+"248
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 248:     }
 }
-"39
-[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 39: Std_ReturnType gpio_port_read_logic(portIndex_t port,uint8_t *logic){
+[e $U 321  ]
+"249
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 249:     else
+[e :U 320 ]
+"250
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 250:     {
+{
+"251
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 251:         *lat_registers[port] = logic;
+[e = *U *U + &U _lat_registers * -> _port `ux -> -> # *U &U _lat_registers `ui `ux _logic ]
+"252
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 252:     }
+}
+[e :U 321 ]
+"253
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 253:     return ret ;
+[e ) _ret ]
+[e $UE 319  ]
+"254
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 254: }
+[e :UE 319 ]
+}
+"265
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 265: Std_ReturnType gpio_port_read_logic(portIndex_t port,uint8_t *logic){
 [v _gpio_port_read_logic `(uc ~T0 @X0 1 ef2`E2816`*uc ]
 {
 [e :U _gpio_port_read_logic ]
 [v _port `E2816 ~T0 @X0 1 r1 ]
 [v _logic `*uc ~T0 @X0 1 r2 ]
 [f ]
-"41
-[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 41: }
-[e :UE 281 ]
+"266
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 266:     Std_ReturnType ret = (Std_ReturnType)0x01 ;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 1 `i `uc ]
+"267
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 267:     if(port > 0x05 -1 || ((void*)0) == logic)
+[e $ ! || > -> _port `ui -> - -> 5 `i -> 1 `i `ui == -> -> -> 0 `i `*v `*uc _logic 323  ]
+"268
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 268:     {
+{
+"269
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 269:         ret = (Std_ReturnType)0x00 ;
+[e = _ret -> -> 0 `i `uc ]
+"270
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 270:     }
 }
-"42
-[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 42: Std_ReturnType gpio_port_toggle_logic(portIndex_t port){
+[e $U 324  ]
+"271
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 271:     else
+[e :U 323 ]
+"272
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 272:     {
+{
+"273
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 273:         *logic = *port_registers[port] ;
+[e = *U _logic *U *U + &U _port_registers * -> _port `ux -> -> # *U &U _port_registers `ui `ux ]
+"274
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 274:     }
+}
+[e :U 324 ]
+"275
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 275:     return ret ;
+[e ) _ret ]
+[e $UE 322  ]
+"276
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 276: }
+[e :UE 322 ]
+}
+"286
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 286: Std_ReturnType gpio_port_toggle_logic(portIndex_t port){
 [v _gpio_port_toggle_logic `(uc ~T0 @X0 1 ef1`E2816 ]
 {
 [e :U _gpio_port_toggle_logic ]
 [v _port `E2816 ~T0 @X0 1 r1 ]
 [f ]
-"44
-[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 44: }
-[e :UE 282 ]
+"287
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 287:     Std_ReturnType ret = (Std_ReturnType)0x01 ;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 1 `i `uc ]
+"288
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 288:     if(port > 0x05 -1)
+[e $ ! > -> _port `ui -> - -> 5 `i -> 1 `i `ui 326  ]
+"289
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 289:     {
+{
+"290
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 290:         ret = (Std_ReturnType)0x00 ;
+[e = _ret -> -> 0 `i `uc ]
+"291
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 291:     }
+}
+[e $U 327  ]
+"292
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 292:     else
+[e :U 326 ]
+"293
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 293:     {
+{
+"294
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 294:         *lat_registers[port] ^= 0xFF ;
+[e =^ *U *U + &U _lat_registers * -> _port `ux -> -> # *U &U _lat_registers `ui `ux -> -> 255 `i `uc ]
+"295
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 295:     }
+}
+[e :U 327 ]
+"296
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 296:     return ret ;
+[e ) _ret ]
+[e $UE 325  ]
+"297
+[; ;MCAL_LAYER/GPIO/HAL_GPIO.c: 297: }
+[e :UE 325 ]
 }

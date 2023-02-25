@@ -10,13 +10,11 @@
 ### Memory Usage ###
  Intel Hex-file ranges:
   0h - 3h		(dist/default/production\8_bit_Microcontroller_Interface.production.hex)
-  FFB6h - FFB9h		(dist/default/production\8_bit_Microcontroller_Interface.production.hex)
-  FFBBh - FFFFh		(dist/default/production\8_bit_Microcontroller_Interface.production.hex)
+  FEAEh - FFFFh		(dist/default/production\8_bit_Microcontroller_Interface.production.hex)
   200000h - 200007h		(dist/default/production\8_bit_Microcontroller_Interface.production.hex)
   300000h - 30000Dh		(dist/default/production\8_bit_Microcontroller_Interface.production.hex)
  Unused ranges:
-  4h - FFB5h
-  FFBAh - FFBAh
+  4h - FEADh
   10000h - 1FFFFFh
   200008h - 2FFFFFh
 
@@ -29,7 +27,24 @@
 ----------------------------------------------------------
 00000000 | H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- -- -- --
 ----------------------------------------------------------
-0000FFB0 | -- -- -- -- -- -- H1 H1 H1 H1 -- H1 H1 H1 H1 H1
+0000FEA0 | -- -- -- -- -- -- -- -- -- -- -- -- -- -- H1 H1
+0000FEB0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+0000FEC0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+0000FED0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+0000FEE0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+0000FEF0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+0000FF00 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+0000FF10 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+0000FF20 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+0000FF30 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+0000FF40 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+0000FF50 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+0000FF60 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+0000FF70 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+0000FF80 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+0000FF90 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+0000FFA0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+0000FFB0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 0000FFC0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 0000FFD0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 0000FFE0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1

@@ -4234,7 +4234,7 @@ extern volatile __bit nWRITE __attribute__((address(0x7E3A)));
 # 1 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../MCAL_STD_TYPES.h" 1
 # 13 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../MCAL_STD_TYPES.h"
 # 1 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../COMPILER.h" 1
-# 11 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../COMPILER.h"
+# 13 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../COMPILER.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -4489,7 +4489,7 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\xc.h" 2 3
-# 11 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../COMPILER.h" 2
+# 13 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../COMPILER.h" 2
 # 13 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../MCAL_STD_TYPES.h" 2
 
 # 1 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../STD_LIBRARIES.h" 1
@@ -4656,7 +4656,10 @@ typedef uint8_t Std_ReturnType ;
 
 # 1 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../DEVICE_CONFIG.h" 1
 # 15 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/HAL_GPIO.h" 2
-# 33 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/HAL_GPIO.h"
+
+# 1 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/HAL_GPIO_CFG.h" 1
+# 16 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/HAL_GPIO.h" 2
+# 39 "ECU_LAYER/LED/../../MCAL_LAYER/GPIO/HAL_GPIO.h"
 typedef enum {
     GPIO_LOW = 0,
     GPIO_HIGH
@@ -4697,6 +4700,7 @@ Std_ReturnType gpio_pin_get_direction_status(const pinConfig_t *_pin_config,dire
 Std_ReturnType gpio_pin_write_logic(const pinConfig_t *_pin_config,logic_t logic);
 Std_ReturnType gpio_pin_read_logic(const pinConfig_t *_pin_config,logic_t *logic);
 Std_ReturnType gpio_pin_toggle_logic(const pinConfig_t *_pin_config);
+Std_ReturnType gpio_pin_init(const pinConfig_t *_pin_config);
 
 Std_ReturnType gpio_port_direction_init(portIndex_t port, uint8_t direction);
 Std_ReturnType gpio_port_get_direction_status(portIndex_t port,uint8_t *direction_status);
