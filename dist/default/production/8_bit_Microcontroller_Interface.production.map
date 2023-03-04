@@ -7,10 +7,10 @@ Linker command line:
   -cn \
   -h+dist/default/production\8_bit_Microcontroller_Interface.production.sym \
   --cmf=dist/default/production\8_bit_Microcontroller_Interface.production.cmf \
-  -z -Q18F4620 -oC:\Users\ALYAHM~1\AppData\Local\Temp\xcAs6ok.5 \
+  -z -Q18F4620 -oC:\Users\ALYAHM~1\AppData\Local\Temp\xcAs7t4.4 \
   --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
   -Mdist/default/production/8_bit_Microcontroller_Interface.production.map \
-  --md=C:\Users\ALYAHM~1\AppData\Local\Temp\xcBs6ok.dat -E1 \
+  --md=C:\Users\ALYAHM~1\AppData\Local\Temp\xcAs7t4.dat -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ACODE=00h-0FFFFh -ACONST=00h-0FFFFh \
   -ASMALLCONST=01000h-010FFhx240 -AMEDIUMCONST=01000h-0FFFFh \
   -ACOMRAM=01h-07Fh -AABS1=00h-0F7Fh -ABIGRAM=01h-0F7Fh \
@@ -29,7 +29,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\ALYAHM~1\AppData\Local\Temp\xcAs6ok.o \
+  C:\Users\ALYAHM~1\AppData\Local\Temp\xcAs7t4.o \
   dist/default/production\8_bit_Microcontroller_Interface.production.o 
 
 Object code version is 3.11
@@ -39,7 +39,7 @@ Machine type is 18F4620
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\ALYAHM~1\AppData\Local\Temp\xcAs6ok.o
+C:\Users\ALYAHM~1\AppData\Local\Temp\xcAs7t4.o
                 idloc                            200000   200000        8        0       5
                 config                           300000   300000        E        0       4
                 init                                  0        0        4        0       0
@@ -54,9 +54,9 @@ dist/default/production\8_bit_Microcontroller_Interface.production.o
                 text0                              FAFC     FAFC       C4     7D7E       0
                 cstackCOMRAM                         23       23       11        1       1
                 dataCOMRAM                            1        1       22        1       1
-                bssCOMRAM                            34       34        4        1       1
-                cinit                              FA08     FA08       32     7D04       0
-                idataCOMRAM                        F9E6     F9E6       22     F9E6       0
+                bssCOMRAM                            34       34        7        1       1
+                cinit                              FA04     FA04       36     7D02       0
+                idataCOMRAM                        F9E2     F9E2       22     F9E2       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   CODE           
@@ -67,8 +67,8 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text2                              FBC0     FBC0       C6         0
                 text1                              FC86     FC86       C6         0
                 text0                              FAFC     FAFC       C4         0
-                cinit                              FA08     FA08       32         0
-                idataCOMRAM                        F9E6     F9E6       22         0
+                cinit                              FA04     FA04       36         0
+                idataCOMRAM                        F9E2     F9E2       22         0
 
         CLASS   CONST          
 
@@ -79,7 +79,7 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   COMRAM         
                 cstackCOMRAM                         23       23       11         1
                 dataCOMRAM                            1        1       22         1
-                bssCOMRAM                            34       34        4         1
+                bssCOMRAM                            34       34        7         1
 
         CLASS   ABS1           
 
@@ -142,9 +142,9 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class
 
                 reset_vec                      000000  000004  000004         0       0  CODE    
-                dataCOMRAM                     000001  000037  000038         1       1  COMRAM  
-                idataCOMRAM                    00F9E6  000022  00FA08      F9E6       0  CODE    
-                cinit                          00FA08  000032  00FA3A      7D04       0  CODE    
+                dataCOMRAM                     000001  00003A  00003B         1       1  COMRAM  
+                idataCOMRAM                    00F9E2  000022  00FA04      F9E2       0  CODE    
+                cinit                          00FA04  000036  00FA3A      7D02       0  CODE    
                 text4                          00FA3A  0000C2  00FAFC      7D1D       0  CODE    
                 text0                          00FAFC  0000C4  00FBC0      7D7E       0  CODE    
                 text2                          00FBC0  0000C6  00FC86      7DE0       0  CODE    
@@ -172,19 +172,22 @@ UNUSED ADDRESS RANGES
         BANK7            000700-0007FF              100
         BANK8            000800-0008FF              100
         BANK9            000900-0009FF              100
-        BIGRAM           000038-000F7F              F48
+        BIGRAM           00003B-000F7F              F45
         BIGSFR           000F80-000FFF               80
-        CODE             000004-00F9E5             F9E2
-        COMRAM           000038-00007F               48
-        CONST            000004-00F9E5             F9E2
+        CODE             000004-00F9E1             F9DE
+        COMRAM           00003B-00007F               45
+        CONST            000004-00F9E1             F9DE
         EEDATA           F00000-F003FF              400
-        MEDIUMCONST      001000-00F9E5             E9E6
+        MEDIUMCONST      001000-00F9E1             E9E2
         RAM              000080-000F7F              100
         SFR              000F80-000FFF               80
-        SMALLCONST       001000-00F9E5              100
+        SMALLCONST       001000-00F9E1              100
 
                                   Symbol Table
 
+Relay_TurnOff@F2883                 bssCOMRAM    000034
+Relay_TurnOn@F2878                  bssCOMRAM    000035
+Relay_init@F2873                    bssCOMRAM    000036
 _LATA                               (abs)        000F89
 _LATB                               (abs)        000F8A
 _LATC                               (abs)        000F8B
@@ -269,7 +272,7 @@ __Hrparam                           rparam       000000
 __Hsfr                              sfr          000000
 __Hsmallconst                       smallconst   000000
 __Hspace_0                          (abs)        010000
-__Hspace_1                          (abs)        000038
+__Hspace_1                          (abs)        00003B
 __Hspace_2                          (abs)        000000
 __Hspace_4                          (abs)        60000E
 __Hstack                            stack        000000
@@ -361,7 +364,7 @@ __Ltext3                            text3        000000
 __Ltext4                            text4        000000
 __Ltext5                            text5        000000
 __S0                                (abs)        010000
-__S1                                (abs)        000038
+__S1                                (abs)        00003B
 __S4                                (abs)        000000
 __S5                                (abs)        000000
 ___heap_hi                          (abs)        000000
@@ -380,13 +383,13 @@ __end_of_led_init                   text4        00FAFC
 __end_of_led_turn_off               text2        00FC86
 __end_of_led_turn_on                text1        00FD4C
 __end_of_main                       text0        00FBC0
-__initialization                    cinit        00FA08
+__initialization                    cinit        00FA04
 __mediumconst                       mediumconst  000000
 __pbssCOMRAM                        bssCOMRAM    000034
-__pcinit                            cinit        00FA08
+__pcinit                            cinit        00FA04
 __pcstackCOMRAM                     cstackCOMRAM 000023
 __pdataCOMRAM                       dataCOMRAM   000001
-__pidataCOMRAM                      idataCOMRAM  00F9E6
+__pidataCOMRAM                      idataCOMRAM  00F9E2
 __ptext0                            text0        00FAFC
 __ptext1                            text1        00FC86
 __ptext2                            text2        00FBC0
@@ -416,23 +419,23 @@ intlevel2                           text         000000
 intlevel3                           text         000000
 isa$std                             (abs)        000001
 isa$xinst                           (abs)        000000
-led_init@F2879                      bssCOMRAM    000037
+led_init@F2879                      bssCOMRAM    00003A
 led_init@Pin_obj                    cstackCOMRAM 000030
 led_init@led                        cstackCOMRAM 00002C
 led_init@ret                        cstackCOMRAM 00002F
-led_toggle_state@F2894              bssCOMRAM    000034
-led_turn_off@F2889                  bssCOMRAM    000035
+led_toggle_state@F2894              bssCOMRAM    000037
+led_turn_off@F2889                  bssCOMRAM    000038
 led_turn_off@Pin_obj                cstackCOMRAM 000031
 led_turn_off@led                    cstackCOMRAM 00002D
 led_turn_off@ret                    cstackCOMRAM 000030
-led_turn_on@F2884                   bssCOMRAM    000036
+led_turn_on@F2884                   bssCOMRAM    000039
 led_turn_on@Pin_obj                 cstackCOMRAM 000031
 led_turn_on@led                     cstackCOMRAM 00002D
 led_turn_on@ret                     cstackCOMRAM 000030
 stackhi                             (abs)        000000
 stacklo                             (abs)        000000
 start                               init         000000
-start_initialization                cinit        00FA08
+start_initialization                cinit        00FA04
 
 
 MODULE INFORMATION
@@ -450,9 +453,9 @@ Application.c
 Application.c estimated size: 196
 
 shared
-		__initialization		CODE           	FA08	0000	40
+		__initialization		CODE           	FA04	0000	44
 
-shared estimated size: 40
+shared estimated size: 44
 
 ECU_LAYER/LED/ECU_LED.c
 		_led_init      		CODE           	FA3A	0000	194
