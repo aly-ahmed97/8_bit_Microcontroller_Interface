@@ -9,6 +9,10 @@
           <itemPath>ECU_LAYER/LED/ECU_LED.h</itemPath>
           <itemPath>ECU_LAYER/LED/ECU_LED_CONFIG.h</itemPath>
         </logicalFolder>
+        <logicalFolder name="PUSH_BUTTON" displayName="PUSH_BUTTON" projectFiles="true">
+          <itemPath>ECU_LAYER/PUSH_BUTTON/ECU_PUSH_BUTTON.h</itemPath>
+          <itemPath>ECU_LAYER/PUSH_BUTTON/ECU_PUSH_BUTTON_CONFIG.h</itemPath>
+        </logicalFolder>
       </logicalFolder>
       <logicalFolder name="MCAL_LAYER" displayName="MCAL_LAYER" projectFiles="true">
         <logicalFolder name="GPIO" displayName="GPIO" projectFiles="true">
@@ -32,6 +36,9 @@
       <logicalFolder name="ECU_LAYER" displayName="ECU_LAYER" projectFiles="true">
         <logicalFolder name="LED" displayName="LED" projectFiles="true">
           <itemPath>ECU_LAYER/LED/ECU_LED.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="PUSH_BUTTON" displayName="PUSH_BUTTON" projectFiles="true">
+          <itemPath>ECU_LAYER/PUSH_BUTTON/ECU_PUSH_BUTTON.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="MCAL_LAYER" displayName="MCAL_LAYER" projectFiles="true">

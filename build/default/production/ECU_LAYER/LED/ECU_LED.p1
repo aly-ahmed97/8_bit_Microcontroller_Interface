@@ -15,7 +15,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;ECU_LAYER/LED/../../MCAL_LAYER/GPIO/HAL_GPIO.h: 74: Std_ReturnType gpio_pin_direction_init(const pinConfig_t *_pin_config);
 [v _gpio_pin_direction_init `(uc ~T0 @X0 0 ef1`*CS272 ]
 "66 ECU_LAYER/LED/ECU_LED.c
-[; ;ECU_LAYER/LED/ECU_LED.c: 66:         gpio_pin_write_logic(&Pin_obj,GPIO_HIGH);
+[; ;ECU_LAYER/LED/ECU_LED.c: 66:         ret = gpio_pin_write_logic(&Pin_obj,GPIO_HIGH);
 [c E2798 0 1 .. ]
 [n E2798 . GPIO_LOW GPIO_HIGH  ]
 "76 ECU_LAYER/LED/../../MCAL_LAYER/GPIO/HAL_GPIO.h
@@ -359,8 +359,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _Pin_obj F2879 ]
 [e ; = . _Pin_obj 0 . *U _led 0 ; = . _Pin_obj 1 . *U _led 1 ; = . _Pin_obj 2 -> . `E2802 0 `uc = . _Pin_obj 3 . *U _led 2 ]
 "35
-[; ;ECU_LAYER/LED/ECU_LED.c: 35:         gpio_pin_direction_init(&Pin_obj);
-[e ( _gpio_pin_direction_init (1 -> &U _Pin_obj `*CS272 ]
+[; ;ECU_LAYER/LED/ECU_LED.c: 35:         ret = gpio_pin_direction_init(&Pin_obj);
+[e = _ret ( _gpio_pin_direction_init (1 -> &U _Pin_obj `*CS272 ]
 "36
 [; ;ECU_LAYER/LED/ECU_LED.c: 36:     }
 }
@@ -435,8 +435,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _Pin_obj F2884 ]
 [e ; = . _Pin_obj 0 . *U _led 0 ; = . _Pin_obj 1 . *U _led 1 ; = . _Pin_obj 2 -> . `E2802 0 `uc = . _Pin_obj 3 . *U _led 2 ]
 "66
-[; ;ECU_LAYER/LED/ECU_LED.c: 66:         gpio_pin_write_logic(&Pin_obj,GPIO_HIGH);
-[e ( _gpio_pin_write_logic (2 , -> &U _Pin_obj `*CS272 . `E2798 1 ]
+[; ;ECU_LAYER/LED/ECU_LED.c: 66:         ret = gpio_pin_write_logic(&Pin_obj,GPIO_HIGH);
+[e = _ret ( _gpio_pin_write_logic (2 , -> &U _Pin_obj `*CS272 . `E2798 1 ]
 "67
 [; ;ECU_LAYER/LED/ECU_LED.c: 67:     }
 }
@@ -511,8 +511,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _Pin_obj F2889 ]
 [e ; = . _Pin_obj 0 . *U _led 0 ; = . _Pin_obj 1 . *U _led 1 ; = . _Pin_obj 2 -> . `E2802 0 `uc = . _Pin_obj 3 . *U _led 2 ]
 "97
-[; ;ECU_LAYER/LED/ECU_LED.c: 97:         gpio_pin_write_logic(&Pin_obj,GPIO_LOW);
-[e ( _gpio_pin_write_logic (2 , -> &U _Pin_obj `*CS272 . `E2798 0 ]
+[; ;ECU_LAYER/LED/ECU_LED.c: 97:         ret = gpio_pin_write_logic(&Pin_obj,GPIO_LOW);
+[e = _ret ( _gpio_pin_write_logic (2 , -> &U _Pin_obj `*CS272 . `E2798 0 ]
 "98
 [; ;ECU_LAYER/LED/ECU_LED.c: 98:     }
 }
@@ -587,8 +587,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _Pin_obj F2894 ]
 [e ; = . _Pin_obj 0 . *U _led 0 ; = . _Pin_obj 1 . *U _led 1 ; = . _Pin_obj 2 -> . `E2802 0 `uc = . _Pin_obj 3 . *U _led 2 ]
 "128
-[; ;ECU_LAYER/LED/ECU_LED.c: 128:         gpio_pin_toggle_logic(&Pin_obj);
-[e ( _gpio_pin_toggle_logic (1 -> &U _Pin_obj `*CS272 ]
+[; ;ECU_LAYER/LED/ECU_LED.c: 128:         ret = gpio_pin_toggle_logic(&Pin_obj);
+[e = _ret ( _gpio_pin_toggle_logic (1 -> &U _Pin_obj `*CS272 ]
 "129
 [; ;ECU_LAYER/LED/ECU_LED.c: 129:     }
 }

@@ -4750,7 +4750,7 @@ Std_ReturnType led_init(const led_t *led){
         .Direction = GPIO_OUTPUT ,
         .Logic = led->led_status
         };
-        gpio_pin_direction_init(&Pin_obj);
+        ret = gpio_pin_direction_init(&Pin_obj);
     }
     return ret ;
 }
@@ -4773,7 +4773,7 @@ Std_ReturnType led_turn_on(const led_t *led){
         .Direction = GPIO_OUTPUT ,
         .Logic = led->led_status
         };
-        gpio_pin_write_logic(&Pin_obj,GPIO_HIGH);
+        ret = gpio_pin_write_logic(&Pin_obj,GPIO_HIGH);
     }
     return ret ;
 }
@@ -4796,7 +4796,7 @@ Std_ReturnType led_turn_off(const led_t *led){
         .Direction = GPIO_OUTPUT ,
         .Logic = led->led_status
         };
-        gpio_pin_write_logic(&Pin_obj,GPIO_LOW);
+        ret = gpio_pin_write_logic(&Pin_obj,GPIO_LOW);
     }
     return ret ;
 }
@@ -4819,7 +4819,7 @@ Std_ReturnType led_toggle_state(const led_t *led){
         .Direction = GPIO_OUTPUT ,
         .Logic = led->led_status
         };
-        gpio_pin_toggle_logic(&Pin_obj);
+        ret = gpio_pin_toggle_logic(&Pin_obj);
     }
     return ret ;
 }

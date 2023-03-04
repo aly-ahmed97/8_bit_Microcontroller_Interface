@@ -12,12 +12,10 @@
 
 /* Includes Section : */
 
-#define LED_ENABLE   0x01
-
-#define LED_DISABLE  0x00
-
 /* Macro Declarations Section : */
 
+#define LED_ENABLE   0x01
+#define LED_DISABLE  0x00
 /* Macro Functions Declarations Section : */
 
 /* Data Types Section*/

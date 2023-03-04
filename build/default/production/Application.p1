@@ -372,7 +372,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _ret ( _led_init (1 -> &U _Led4 `*CS273 ]
 "35
 [; ;Application.c: 35:     while(1)
-[e :U 276 ]
+[e :U 277 ]
 "36
 [; ;Application.c: 36:     {
 {
@@ -409,14 +409,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "48
 [; ;Application.c: 48:     }
 }
-[e :U 275 ]
-[e $U 276  ]
-[e :U 277 ]
+[e :U 276 ]
+[e $U 277  ]
+[e :U 278 ]
 "49
 [; ;Application.c: 49:     return (0);
 [e ) -> 0 `i ]
-[e $UE 274  ]
+[e $UE 275  ]
 "50
 [; ;Application.c: 50: }
-[e :UE 274 ]
+[e :UE 275 ]
 }
