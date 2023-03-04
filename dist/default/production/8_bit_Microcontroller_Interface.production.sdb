@@ -27,6 +27,15 @@ BUTTON_ACTIVE_LOW 1
 GPIO_LOW 0
 GPIO_HIGH 1
 ]
+"20 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\ECU_LAYER/RELAY/ECU_RELAY.c
+[e E2802 . `uc
+GPIO_OUTPUT 0
+GPIO_INPUT 1
+]
+[e E2798 . `uc
+GPIO_LOW 0
+GPIO_HIGH 1
+]
 "44 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\MCAL_LAYER/GPIO/HAL_GPIO.c
 [e E2802 . `uc
 GPIO_OUTPUT 0
@@ -67,11 +76,12 @@ GPIO_PIN7 7
 GPIO_LOW 0
 GPIO_HIGH 1
 ]
-"20 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\ECU_LAYER/RELAY/ECU_RELAY.c
+"25 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\ECU_LAYER/DC_MOTOR/ECU_DC_MOTOR.c
 [e E2802 . `uc
 GPIO_OUTPUT 0
 GPIO_INPUT 1
 ]
+"55
 [e E2798 . `uc
 GPIO_LOW 0
 GPIO_HIGH 1
@@ -159,6 +169,15 @@ GPIO_HIGH 1
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
 "2269
 [v _TRISE TRISE `VEuc  1 e 1 @3990 ]
+[s S29 . 1 `uc 1 Port 1 0 :3:0 
+`uc 1 Pin_Number 1 0 :3:3 
+`uc 1 Direction 1 0 :1:6 
+`uc 1 Logic 1 0 :1:7 
+]
+"4 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\ECU_LAYER/DC_MOTOR/ECU_DC_MOTOR.c
+[v _pin1 pin1 `S29  1 s 1 pin1 ]
+"5
+[v _pin2 pin2 `S29  1 s 1 pin2 ]
 "10 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\MCAL_LAYER/GPIO/HAL_GPIO.c
 [v _tris_registers tris_registers `[5]*.39VEuc  1 e 10 0 ]
 "11

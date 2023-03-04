@@ -2,7 +2,7 @@
 
 #include "ECU_RELAY.h"
 /**
- * @brief initialize the required pin to be INPUT
+ * @brief initialize the required pin to be OUTPUT
  * @param Relay : pointer to relay configurations 
  * @return status of the function :
  *        (E_OK) if function executed successfully 
