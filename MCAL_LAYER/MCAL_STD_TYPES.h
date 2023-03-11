@@ -38,6 +38,8 @@ typedef uint8_t Std_ReturnType ;
 #define E_OK            (Std_ReturnType)0x01
 #define E_NOT_OK        (Std_ReturnType)0x00
 
+#define ZERO_INT        0
+
 /* Macro Functions Declarations Section : */
 
 /* Functions Declarations Section */

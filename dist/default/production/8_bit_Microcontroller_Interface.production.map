@@ -7,10 +7,10 @@ Linker command line:
   -cn \
   -h+dist/default/production\8_bit_Microcontroller_Interface.production.sym \
   --cmf=dist/default/production\8_bit_Microcontroller_Interface.production.cmf \
-  -z -Q18F4620 -oC:\Users\ALYAHM~1\AppData\Local\Temp\xcAsbpk.4 \
+  -z -Q18F4620 -oC:\Users\ALYAHM~1\AppData\Local\Temp\xcAsdvs.4 \
   --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
   -Mdist/default/production/8_bit_Microcontroller_Interface.production.map \
-  --md=C:\Users\ALYAHM~1\AppData\Local\Temp\xcAsbpk.dat -E1 \
+  --md=C:\Users\ALYAHM~1\AppData\Local\Temp\xcAsdvs.dat -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ACODE=00h-0FFFFh -ACONST=00h-0FFFFh \
   -ASMALLCONST=01000h-010FFhx240 -AMEDIUMCONST=01000h-0FFFFh \
   -ACOMRAM=01h-07Fh -AABS1=00h-0F7Fh -ABIGRAM=01h-0F7Fh \
@@ -29,7 +29,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\ALYAHM~1\AppData\Local\Temp\xcAsbpk.o \
+  C:\Users\ALYAHM~1\AppData\Local\Temp\xcAsdvs.o \
   dist/default/production\8_bit_Microcontroller_Interface.production.o 
 
 Object code version is 3.11
@@ -39,40 +39,42 @@ Machine type is 18F4620
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\ALYAHM~1\AppData\Local\Temp\xcAsbpk.o
+C:\Users\ALYAHM~1\AppData\Local\Temp\xcAsdvs.o
                 idloc                            200000   200000        8        0       5
                 config                           300000   300000        E        0       4
                 init                                  0        0        4        0       0
 dist/default/production\8_bit_Microcontroller_Interface.production.o
                 idloc                            200000   200000        8        0       5
                 config                           300000   300000        E        0       4
-                text5                              FE9A     FE9A      166     7F4D       0
-                text4                              FA3A     FA3A       C2     7D1D       0
-                text3                              FD4C     FD4C      14E     7EA6       0
-                text2                              FBC0     FBC0       C6     7DE0       0
-                text1                              FC86     FC86       C6     7E43       0
-                text0                              FAFC     FAFC       C4     7D7E       0
+                smallconst                         1000     1000       12      800       0
+                text5                              1012     1012      166      809       0
+                text4                              1516     1516       C2      809       0
+                text3                              1178     1178      14E      809       0
+                text2                              138C     138C       C6      809       0
+                text1                              12C6     12C6       C6      809       0
+                text0                              1452     1452       C4      809       0
                 cstackCOMRAM                         23       23       11        1       1
                 dataCOMRAM                            1        1       22        1       1
                 bssCOMRAM                            34       34        9        1       1
-                cinit                              FA04     FA04       36     7D02       0
-                idataCOMRAM                        F9E2     F9E2       22     F9E2       0
+                cinit                              15D8     15D8       36      809       0
+                idataCOMRAM                        160E     160E       22      809       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   CODE           
                 init                                  0        0        4         0
-                text5                              FE9A     FE9A      166         0
-                text4                              FA3A     FA3A       C2         0
-                text3                              FD4C     FD4C      14E         0
-                text2                              FBC0     FBC0       C6         0
-                text1                              FC86     FC86       C6         0
-                text0                              FAFC     FAFC       C4         0
-                cinit                              FA04     FA04       36         0
-                idataCOMRAM                        F9E2     F9E2       22         0
+                text5                              1012     1012      166         0
+                text4                              1516     1516       C2         0
+                text3                              1178     1178      14E         0
+                text2                              138C     138C       C6         0
+                text1                              12C6     12C6       C6         0
+                text0                              1452     1452       C4         0
+                cinit                              15D8     15D8       36         0
+                idataCOMRAM                        160E     160E       22         0
 
         CLASS   CONST          
 
         CLASS   SMALLCONST     
+                smallconst                         1000     1000       12         0
 
         CLASS   MEDIUMCONST    
 
@@ -143,14 +145,8 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 
                 reset_vec                      000000  000004  000004         0       0  CODE    
                 dataCOMRAM                     000001  00003C  00003D         1       1  COMRAM  
-                idataCOMRAM                    00F9E2  000022  00FA04      F9E2       0  CODE    
-                cinit                          00FA04  000036  00FA3A      7D02       0  CODE    
-                text4                          00FA3A  0000C2  00FAFC      7D1D       0  CODE    
-                text0                          00FAFC  0000C4  00FBC0      7D7E       0  CODE    
-                text2                          00FBC0  0000C6  00FC86      7DE0       0  CODE    
-                text1                          00FC86  0000C6  00FD4C      7E43       0  CODE    
-                text3                          00FD4C  00014E  00FE9A      7EA6       0  CODE    
-                text5                          00FE9A  000166  010000      7F4D       0  CODE    
+                smallconst                     001000  000012  001012       800       0  SMALLCON
+                text5                          001012  00061E  001630       809       0  CODE    
 
 
 UNUSED ADDRESS RANGES
@@ -174,14 +170,16 @@ UNUSED ADDRESS RANGES
         BANK9            000900-0009FF              100
         BIGRAM           00003D-000F7F              F43
         BIGSFR           000F80-000FFF               80
-        CODE             000004-00F9E1             F9DE
+        CODE             000004-000FFF              FFC
+                         001630-00FFFF             E9D0
         COMRAM           00003D-00007F               43
-        CONST            000004-00F9E1             F9DE
+        CONST            000004-000FFF              FFC
+                         001630-00FFFF             E9D0
         EEDATA           F00000-F003FF              400
-        MEDIUMCONST      001000-00F9E1             E9E2
+        MEDIUMCONST      001630-00FFFF             E9D0
         RAM              000080-000F7F              100
         SFR              000F80-000FFF               80
-        SMALLCONST       001000-00F9E1              100
+        SMALLCONST       001630-00FFFF              100
 
                                   Symbol Table
 
@@ -270,8 +268,8 @@ __Hrdata                            rdata        000000
 __Hreset_vec                        reset_vec    000000
 __Hrparam                           rparam       000000
 __Hsfr                              sfr          000000
-__Hsmallconst                       smallconst   000000
-__Hspace_0                          (abs)        010000
+__Hsmallconst                       smallconst   001012
+__Hspace_0                          (abs)        001630
 __Hspace_1                          (abs)        00003D
 __Hspace_2                          (abs)        000000
 __Hspace_4                          (abs)        60000E
@@ -348,7 +346,7 @@ __Lrdata                            rdata        000000
 __Lreset_vec                        reset_vec    000000
 __Lrparam                           rparam       000000
 __Lsfr                              sfr          000000
-__Lsmallconst                       smallconst   000000
+__Lsmallconst                       smallconst   001000
 __Lspace_0                          (abs)        000000
 __Lspace_1                          (abs)        000000
 __Lspace_2                          (abs)        000000
@@ -363,7 +361,7 @@ __Ltext2                            text2        000000
 __Ltext3                            text3        000000
 __Ltext4                            text4        000000
 __Ltext5                            text5        000000
-__S0                                (abs)        010000
+__S0                                (abs)        001630
 __S1                                (abs)        00003D
 __S4                                (abs)        000000
 __S5                                (abs)        000000
@@ -376,40 +374,42 @@ ___rparam_used                      (abs)        000001
 ___sp                               stack        000000
 __accesstop                         (abs)        000080
 __activetblptr                      (abs)        000002
-__end_of__initialization            cinit        00FA30
-__end_of_gpio_pin_direction_init    text5        010000
-__end_of_gpio_pin_write_logic       text3        00FE9A
-__end_of_led_init                   text4        00FAFC
-__end_of_led_turn_off               text2        00FC86
-__end_of_led_turn_on                text1        00FD4C
-__end_of_main                       text0        00FBC0
-__initialization                    cinit        00FA04
+__end_of__initialization            cinit        001604
+__end_of_button_Values              smallconst   001011
+__end_of_gpio_pin_direction_init    text5        001178
+__end_of_gpio_pin_write_logic       text3        0012C6
+__end_of_led_init                   text4        0015D8
+__end_of_led_turn_off               text2        001452
+__end_of_led_turn_on                text1        00138C
+__end_of_main                       text0        001516
+__initialization                    cinit        0015D8
 __mediumconst                       mediumconst  000000
 __pbssCOMRAM                        bssCOMRAM    000034
-__pcinit                            cinit        00FA04
+__pcinit                            cinit        0015D8
 __pcstackCOMRAM                     cstackCOMRAM 000023
 __pdataCOMRAM                       dataCOMRAM   000001
-__pidataCOMRAM                      idataCOMRAM  00F9E2
-__ptext0                            text0        00FAFC
-__ptext1                            text1        00FC86
-__ptext2                            text2        00FBC0
-__ptext3                            text3        00FD4C
-__ptext4                            text4        00FA3A
-__ptext5                            text5        00FE9A
+__pidataCOMRAM                      idataCOMRAM  00160E
+__psmallconst                       smallconst   001000
+__ptext0                            text0        001452
+__ptext1                            text1        0012C6
+__ptext2                            text2        00138C
+__ptext3                            text3        001178
+__ptext4                            text4        001516
+__ptext5                            text5        001012
 __ramtop                            ramtop       001000
-__smallconst                        smallconst   000000
-_gpio_pin_direction_init            text5        00FE9A
-_gpio_pin_write_logic               text3        00FD4C
+__smallconst                        smallconst   001000
+_gpio_pin_direction_init            text5        001012
+_gpio_pin_write_logic               text3        001178
 _lat_registers                      dataCOMRAM   000001
-_led_init                           text4        00FA3A
-_led_turn_off                       text2        00FBC0
-_led_turn_on                        text1        00FC86
-_main                               text0        00FAFC
+_led_init                           text4        001516
+_led_turn_off                       text2        00138C
+_led_turn_on                        text1        0012C6
+_main                               text0        001452
 _pin1                               bssCOMRAM    00003C
 _pin2                               bssCOMRAM    00003B
 _port_registers                     dataCOMRAM   00000B
 _tris_registers                     dataCOMRAM   000015
-end_of_initialization               cinit        00FA30
+end_of_initialization               cinit        001604
 gpio_pin_direction_init@_pin_config cstackCOMRAM 000023
 gpio_pin_direction_init@ret         cstackCOMRAM 00002B
 gpio_pin_write_logic@_pin_config    cstackCOMRAM 000023
@@ -437,32 +437,33 @@ led_turn_on@ret                     cstackCOMRAM 000030
 stackhi                             (abs)        000000
 stacklo                             (abs)        000000
 start                               init         000000
-start_initialization                cinit        00FA04
+start_initialization                cinit        0015D8
 
 
 MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 MCAL_LAYER/GPIO/HAL_GPIO.c
-		_gpio_pin_write_logic		CODE           	FD4C	0000	334
-		_gpio_pin_direction_init		CODE           	FE9A	0000	358
+		_gpio_pin_write_logic		CODE           	1178	0000	334
+		_gpio_pin_direction_init		CODE           	1012	0000	358
 
 MCAL_LAYER/GPIO/HAL_GPIO.c estimated size: 692
 
 Application.c
-		_main          		CODE           	FAFC	0000	196
+		_main          		CODE           	1452	0000	196
 
 Application.c estimated size: 196
 
 shared
-		__initialization		CODE           	FA04	0000	44
+		_button_Values 		SMALLCONST     	0000	0000	0
+		__initialization		CODE           	15D8	0000	44
 
 shared estimated size: 44
 
 ECU_LAYER/LED/ECU_LED.c
-		_led_init      		CODE           	FA3A	0000	194
-		_led_turn_on   		CODE           	FC86	0000	198
-		_led_turn_off  		CODE           	FBC0	0000	198
+		_led_init      		CODE           	1516	0000	194
+		_led_turn_on   		CODE           	12C6	0000	198
+		_led_turn_off  		CODE           	138C	0000	198
 
 ECU_LAYER/LED/ECU_LED.c estimated size: 590
 

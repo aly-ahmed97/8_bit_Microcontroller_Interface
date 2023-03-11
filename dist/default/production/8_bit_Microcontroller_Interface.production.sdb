@@ -76,12 +76,27 @@ GPIO_PIN7 7
 GPIO_LOW 0
 GPIO_HIGH 1
 ]
+"11 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\ECU_LAYER/7_segments/ECU_7_SEGMENTS.c
+[e E2858 . `uc
+_7_SEGMENTS_COMMON_ANODE 0
+_7_SEGMENTS_COMMON_CATHODE 1
+]
+"44
+[e E2798 . `uc
+GPIO_LOW 0
+GPIO_HIGH 1
+]
 "25 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\ECU_LAYER/DC_MOTOR/ECU_DC_MOTOR.c
 [e E2802 . `uc
 GPIO_OUTPUT 0
 GPIO_INPUT 1
 ]
 "55
+[e E2798 . `uc
+GPIO_LOW 0
+GPIO_HIGH 1
+]
+"45 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\ECU_LAYER/KEYBAD/ECU_KEYBAD.c
 [e E2798 . `uc
 GPIO_LOW 0
 GPIO_HIGH 1
@@ -126,6 +141,8 @@ GPIO_HIGH 1
 [v _gpio_pin_read_logic gpio_pin_read_logic `(uc  1 e 1 0 ]
 "145
 [v _gpio_pin_toggle_logic gpio_pin_toggle_logic `(uc  1 e 1 0 ]
+"170
+[v _gpio_pin_init gpio_pin_init `(uc  1 e 1 0 ]
 [s S24 . 1 `uc 1 port 1 0 :3:0 
 `uc 1 pin 1 0 :3:3 
 `uc 1 led_status 1 0 :1:6 
