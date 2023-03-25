@@ -3,6 +3,36 @@
 [d edition pro ]
 [d chip 18F4620 ]
 [d frameptr 4065 ]
+"11 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\ECU_LAYER/7_segments/ECU_7_SEGMENTS.c
+[e E2858 . `uc
+_7_SEGMENTS_COMMON_ANODE 0
+_7_SEGMENTS_COMMON_CATHODE 1
+]
+"44
+[e E2798 . `uc
+GPIO_LOW 0
+GPIO_HIGH 1
+]
+"42 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\ECU_LAYER/CHAR_LCD/ECU_CHAR_LCD.c
+[e E2798 . `uc
+GPIO_LOW 0
+GPIO_HIGH 1
+]
+"25 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\ECU_LAYER/DC_MOTOR/ECU_DC_MOTOR.c
+[e E2802 . `uc
+GPIO_OUTPUT 0
+GPIO_INPUT 1
+]
+"55
+[e E2798 . `uc
+GPIO_LOW 0
+GPIO_HIGH 1
+]
+"45 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\ECU_LAYER/KEYBAD/ECU_KEYBAD.c
+[e E2798 . `uc
+GPIO_LOW 0
+GPIO_HIGH 1
+]
 "29 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\ECU_LAYER/LED/ECU_LED.c
 [e E2802 . `uc
 GPIO_OUTPUT 0
@@ -54,7 +84,7 @@ PORTC_INDEX 2
 PORTD_INDEX 3
 PORTE_INDEX 4
 ]
-"10 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\Application.c
+"8 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\Application.c
 [e E2816 . `uc
 PORTA_INDEX 0
 PORTB_INDEX 1
@@ -72,36 +102,15 @@ GPIO_PIN5 5
 GPIO_PIN6 6
 GPIO_PIN7 7
 ]
-[e E2798 . `uc
-GPIO_LOW 0
-GPIO_HIGH 1
-]
-"11 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\ECU_LAYER/7_segments/ECU_7_SEGMENTS.c
-[e E2858 . `uc
-_7_SEGMENTS_COMMON_ANODE 0
-_7_SEGMENTS_COMMON_CATHODE 1
-]
-"44
-[e E2798 . `uc
-GPIO_LOW 0
-GPIO_HIGH 1
-]
-"25 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\ECU_LAYER/DC_MOTOR/ECU_DC_MOTOR.c
 [e E2802 . `uc
 GPIO_OUTPUT 0
 GPIO_INPUT 1
 ]
-"55
 [e E2798 . `uc
 GPIO_LOW 0
 GPIO_HIGH 1
 ]
-"45 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\ECU_LAYER/KEYBAD/ECU_KEYBAD.c
-[e E2798 . `uc
-GPIO_LOW 0
-GPIO_HIGH 1
-]
-"30 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\Application.c
+"84
 [v _main main `(i  1 e 2 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
@@ -127,12 +136,34 @@ GPIO_HIGH 1
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"17 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\ECU_LAYER/LED/ECU_LED.c
-[v _led_init led_init `(uc  1 e 1 0 ]
-"48
-[v _led_turn_on led_turn_on `(uc  1 e 1 0 ]
-"79
-[v _led_turn_off led_turn_off `(uc  1 e 1 0 ]
+"4 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\ECU_LAYER/CHAR_LCD/ECU_CHAR_LCD.c
+[v _lcd_init_4bit lcd_init_4bit `(uc  1 e 1 0 ]
+"33
+[v _lcd_send_command_4bit lcd_send_command_4bit `(uc  1 e 1 0 ]
+"60
+[v _lcd_send_data_4bit lcd_send_data_4bit `(uc  1 e 1 0 ]
+"88
+[v _lcd_send_data_pos_4bit lcd_send_data_pos_4bit `(uc  1 e 1 0 ]
+"102
+[v _lcd_send_string_4bit lcd_send_string_4bit `(uc  1 e 1 0 ]
+"118
+[v _lcd_send_string_pos_4bit lcd_send_string_pos_4bit `(uc  1 e 1 0 ]
+"133
+[v _lcd_init_8bit lcd_init_8bit `(uc  1 e 1 0 ]
+"163
+[v _lcd_send_command_8bit lcd_send_command_8bit `(uc  1 e 1 0 ]
+"184
+[v _lcd_send_data_8bit lcd_send_data_8bit `(uc  1 e 1 0 ]
+"206
+[v _lcd_send_data_pos_8bit lcd_send_data_pos_8bit `(uc  1 e 1 0 ]
+"220
+[v _lcd_send_string_8bit lcd_send_string_8bit `(uc  1 e 1 0 ]
+"236
+[v _lcd_send_string_pos_8bit lcd_send_string_pos_8bit `(uc  1 e 1 0 ]
+"262
+[v _lcd_8bit_set_cursor lcd_8bit_set_cursor `(uc  1 s 1 lcd_8bit_set_cursor ]
+"275
+[v _lcd_4bit_set_cursor lcd_4bit_set_cursor `(uc  1 s 1 lcd_4bit_set_cursor ]
 "22 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\MCAL_LAYER/GPIO/HAL_GPIO.c
 [v _gpio_pin_direction_init gpio_pin_direction_init `(uc  1 e 1 0 ]
 "84
@@ -143,19 +174,17 @@ GPIO_HIGH 1
 [v _gpio_pin_toggle_logic gpio_pin_toggle_logic `(uc  1 e 1 0 ]
 "170
 [v _gpio_pin_init gpio_pin_init `(uc  1 e 1 0 ]
-[s S24 . 1 `uc 1 port 1 0 :3:0 
-`uc 1 pin 1 0 :3:3 
-`uc 1 led_status 1 0 :1:6 
-`uc 1 reserved 1 0 :1:7 
+[s S24 . 1 `uc 1 Port 1 0 :3:0 
+`uc 1 Pin_Number 1 0 :3:3 
+`uc 1 Direction 1 0 :1:6 
+`uc 1 Logic 1 0 :1:7 
 ]
-"10 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\Application.c
-[v _Led1 Led1 `S24  1 e 1 0 ]
-"15
-[v _Led2 Led2 `S24  1 e 1 0 ]
-"20
-[v _Led3 Led3 `S24  1 e 1 0 ]
-"25
-[v _Led4 Led4 `S24  1 e 1 0 ]
+"8 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\Application.c
+[s S66 . 6 `S24 1 lcd_rs 1 0 `S24 1 lcd_en 1 1 `[4]S24 1 lcd_data 4 2 ]
+[v _lcd1 lcd1 `S66  1 e 6 0 ]
+"38
+[s S95 . 10 `S24 1 lcd_rs 1 0 `S24 1 lcd_en 1 1 `[8]S24 1 lcd_data 8 2 ]
+[v _lcd2 lcd2 `S95  1 e 10 0 ]
 "53 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4620.h
 [v _PORTA PORTA `VEuc  1 e 1 @3968 ]
 "190
@@ -186,121 +215,307 @@ GPIO_HIGH 1
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
 "2269
 [v _TRISE TRISE `VEuc  1 e 1 @3990 ]
-[s S29 . 1 `uc 1 Port 1 0 :3:0 
-`uc 1 Pin_Number 1 0 :3:3 
-`uc 1 Direction 1 0 :1:6 
-`uc 1 Logic 1 0 :1:7 
-]
+"8462
+[v _ZERO ZERO `VEb  1 e 0 @32450 ]
 "4 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\ECU_LAYER/DC_MOTOR/ECU_DC_MOTOR.c
-[v _pin1 pin1 `S29  1 s 1 pin1 ]
+[v _pin1 pin1 `S24  1 s 1 pin1 ]
 "5
-[v _pin2 pin2 `S29  1 s 1 pin2 ]
+[v _pin2 pin2 `S24  1 s 1 pin2 ]
 "10 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\MCAL_LAYER/GPIO/HAL_GPIO.c
 [v _tris_registers tris_registers `[5]*.39VEuc  1 e 10 0 ]
 "11
 [v _port_registers port_registers `[5]*.39VEuc  1 e 10 0 ]
 "12
 [v _lat_registers lat_registers `[5]*.39VEuc  1 e 10 0 ]
-"30 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\Application.c
+"84 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\Application.c
 [v _main main `(i  1 e 2 0 ]
 {
-"51
+"101
 } 0
-"48 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\ECU_LAYER/LED/ECU_LED.c
-[v _led_turn_on led_turn_on `(uc  1 e 1 0 ]
+"236 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\ECU_LAYER/CHAR_LCD/ECU_CHAR_LCD.c
+[v _lcd_send_string_pos_8bit lcd_send_string_pos_8bit `(uc  1 e 1 0 ]
 {
-[s S29 . 1 `uc 1 Port 1 0 :3:0 
+"237
+[v lcd_send_string_pos_8bit@ret ret `uc  1 a 1 32 ]
+[s S24 . 1 `uc 1 Port 1 0 :3:0 
+`uc 1 Pin_Number 1 0 :3:3 
+`uc 1 Direction 1 0 :1:6 
+`uc 1 Logic 1 0 :1:7 
+]
+"236
+[s S95 . 10 `S24 1 lcd_rs 1 0 `S24 1 lcd_en 1 1 `[8]S24 1 lcd_data 8 2 ]
+[v lcd_send_string_pos_8bit@lcd lcd `*.39CS95  1 p 2 26 ]
+[v lcd_send_string_pos_8bit@str str `*.25uc  1 p 2 28 ]
+[v lcd_send_string_pos_8bit@column column `uc  1 p 1 30 ]
+[v lcd_send_string_pos_8bit@row row `uc  1 p 1 31 ]
+"249
+} 0
+"220
+[v _lcd_send_string_8bit lcd_send_string_8bit `(uc  1 e 1 0 ]
+{
+"221
+[v lcd_send_string_8bit@ret ret `uc  1 a 1 23 ]
+[s S24 . 1 `uc 1 Port 1 0 :3:0 
+`uc 1 Pin_Number 1 0 :3:3 
+`uc 1 Direction 1 0 :1:6 
+`uc 1 Logic 1 0 :1:7 
+]
+"220
+[s S95 . 10 `S24 1 lcd_rs 1 0 `S24 1 lcd_en 1 1 `[8]S24 1 lcd_data 8 2 ]
+[v lcd_send_string_8bit@lcd lcd `*.39CS95  1 p 2 19 ]
+[v lcd_send_string_8bit@str str `*.25uc  1 p 2 21 ]
+"235
+} 0
+"118
+[v _lcd_send_string_pos_4bit lcd_send_string_pos_4bit `(uc  1 e 1 0 ]
+{
+"119
+[v lcd_send_string_pos_4bit@ret ret `uc  1 a 1 32 ]
+[s S24 . 1 `uc 1 Port 1 0 :3:0 
+`uc 1 Pin_Number 1 0 :3:3 
+`uc 1 Direction 1 0 :1:6 
+`uc 1 Logic 1 0 :1:7 
+]
+"118
+[s S66 . 6 `S24 1 lcd_rs 1 0 `S24 1 lcd_en 1 1 `[4]S24 1 lcd_data 4 2 ]
+[v lcd_send_string_pos_4bit@lcd lcd `*.39CS66  1 p 2 26 ]
+[v lcd_send_string_pos_4bit@str str `*.25uc  1 p 2 28 ]
+[v lcd_send_string_pos_4bit@column column `uc  1 p 1 30 ]
+[v lcd_send_string_pos_4bit@row row `uc  1 p 1 31 ]
+"131
+} 0
+"102
+[v _lcd_send_string_4bit lcd_send_string_4bit `(uc  1 e 1 0 ]
+{
+"103
+[v lcd_send_string_4bit@ret ret `uc  1 a 1 23 ]
+[s S24 . 1 `uc 1 Port 1 0 :3:0 
+`uc 1 Pin_Number 1 0 :3:3 
+`uc 1 Direction 1 0 :1:6 
+`uc 1 Logic 1 0 :1:7 
+]
+"102
+[s S66 . 6 `S24 1 lcd_rs 1 0 `S24 1 lcd_en 1 1 `[4]S24 1 lcd_data 4 2 ]
+[v lcd_send_string_4bit@lcd lcd `*.39CS66  1 p 2 19 ]
+[v lcd_send_string_4bit@str str `*.25uc  1 p 2 21 ]
+"117
+} 0
+"206
+[v _lcd_send_data_pos_8bit lcd_send_data_pos_8bit `(uc  1 e 1 0 ]
+{
+"207
+[v lcd_send_data_pos_8bit@ret ret `uc  1 a 1 31 ]
+[s S24 . 1 `uc 1 Port 1 0 :3:0 
+`uc 1 Pin_Number 1 0 :3:3 
+`uc 1 Direction 1 0 :1:6 
+`uc 1 Logic 1 0 :1:7 
+]
+"206
+[s S95 . 10 `S24 1 lcd_rs 1 0 `S24 1 lcd_en 1 1 `[8]S24 1 lcd_data 8 2 ]
+[v lcd_send_data_pos_8bit@lcd lcd `*.39CS95  1 p 2 26 ]
+[v lcd_send_data_pos_8bit@data data `uc  1 p 1 28 ]
+[v lcd_send_data_pos_8bit@column column `uc  1 p 1 29 ]
+[v lcd_send_data_pos_8bit@row row `uc  1 p 1 30 ]
+"219
+} 0
+"184
+[v _lcd_send_data_8bit lcd_send_data_8bit `(uc  1 e 1 0 ]
+{
+"186
+[v lcd_send_data_8bit@index index `uc  1 a 1 18 ]
+"185
+[v lcd_send_data_8bit@ret ret `uc  1 a 1 17 ]
+[s S24 . 1 `uc 1 Port 1 0 :3:0 
+`uc 1 Pin_Number 1 0 :3:3 
+`uc 1 Direction 1 0 :1:6 
+`uc 1 Logic 1 0 :1:7 
+]
+"184
+[s S95 . 10 `S24 1 lcd_rs 1 0 `S24 1 lcd_en 1 1 `[8]S24 1 lcd_data 8 2 ]
+[v lcd_send_data_8bit@lcd lcd `*.39CS95  1 p 2 10 ]
+[v lcd_send_data_8bit@data data `uc  1 p 1 12 ]
+"205
+} 0
+"262
+[v _lcd_8bit_set_cursor lcd_8bit_set_cursor `(uc  1 s 1 lcd_8bit_set_cursor ]
+{
+"264
+[v lcd_8bit_set_cursor@ret ret `uc  1 a 1 25 ]
+[s S24 . 1 `uc 1 Port 1 0 :3:0 
+`uc 1 Pin_Number 1 0 :3:3 
+`uc 1 Direction 1 0 :1:6 
+`uc 1 Logic 1 0 :1:7 
+]
+"262
+[s S95 . 10 `S24 1 lcd_rs 1 0 `S24 1 lcd_en 1 1 `[8]S24 1 lcd_data 8 2 ]
+[v lcd_8bit_set_cursor@lcd lcd `*.39CS95  1 p 2 19 ]
+[v lcd_8bit_set_cursor@row row `uc  1 p 1 21 ]
+[v lcd_8bit_set_cursor@column column `uc  1 p 1 22 ]
+"274
+} 0
+"88
+[v _lcd_send_data_pos_4bit lcd_send_data_pos_4bit `(uc  1 e 1 0 ]
+{
+"89
+[v lcd_send_data_pos_4bit@ret ret `uc  1 a 1 31 ]
+[s S24 . 1 `uc 1 Port 1 0 :3:0 
+`uc 1 Pin_Number 1 0 :3:3 
+`uc 1 Direction 1 0 :1:6 
+`uc 1 Logic 1 0 :1:7 
+]
+"88
+[s S66 . 6 `S24 1 lcd_rs 1 0 `S24 1 lcd_en 1 1 `[4]S24 1 lcd_data 4 2 ]
+[v lcd_send_data_pos_4bit@lcd lcd `*.39CS66  1 p 2 26 ]
+[v lcd_send_data_pos_4bit@data data `uc  1 p 1 28 ]
+[v lcd_send_data_pos_4bit@column column `uc  1 p 1 29 ]
+[v lcd_send_data_pos_4bit@row row `uc  1 p 1 30 ]
+"101
+} 0
+"60
+[v _lcd_send_data_4bit lcd_send_data_4bit `(uc  1 e 1 0 ]
+{
+"62
+[v lcd_send_data_4bit@index index `uc  1 a 1 18 ]
+"61
+[v lcd_send_data_4bit@ret ret `uc  1 a 1 17 ]
+[s S24 . 1 `uc 1 Port 1 0 :3:0 
 `uc 1 Pin_Number 1 0 :3:3 
 `uc 1 Direction 1 0 :1:6 
 `uc 1 Logic 1 0 :1:7 
 ]
 "60
-[v led_turn_on@Pin_obj Pin_obj `S29  1 a 1 14 ]
-"49
-[v led_turn_on@ret ret `uc  1 a 1 13 ]
-[s S24 . 1 `uc 1 port 1 0 :3:0 
-`uc 1 pin 1 0 :3:3 
-`uc 1 led_status 1 0 :1:6 
-`uc 1 reserved 1 0 :1:7 
-]
-"48
-[v led_turn_on@led led `*.39CS24  1 p 2 10 ]
-"59
-[v led_turn_on@F2884 F2884 `S29  1 s 1 F2884 ]
-"69
+[s S66 . 6 `S24 1 lcd_rs 1 0 `S24 1 lcd_en 1 1 `[4]S24 1 lcd_data 4 2 ]
+[v lcd_send_data_4bit@lcd lcd `*.39CS66  1 p 2 10 ]
+[v lcd_send_data_4bit@data data `uc  1 p 1 12 ]
+"87
 } 0
-"79
-[v _led_turn_off led_turn_off `(uc  1 e 1 0 ]
+"275
+[v _lcd_4bit_set_cursor lcd_4bit_set_cursor `(uc  1 s 1 lcd_4bit_set_cursor ]
 {
-[s S29 . 1 `uc 1 Port 1 0 :3:0 
+"277
+[v lcd_4bit_set_cursor@ret ret `uc  1 a 1 25 ]
+[s S24 . 1 `uc 1 Port 1 0 :3:0 
 `uc 1 Pin_Number 1 0 :3:3 
 `uc 1 Direction 1 0 :1:6 
 `uc 1 Logic 1 0 :1:7 
 ]
-"91
-[v led_turn_off@Pin_obj Pin_obj `S29  1 a 1 14 ]
-"80
-[v led_turn_off@ret ret `uc  1 a 1 13 ]
-[s S24 . 1 `uc 1 port 1 0 :3:0 
-`uc 1 pin 1 0 :3:3 
-`uc 1 led_status 1 0 :1:6 
-`uc 1 reserved 1 0 :1:7 
-]
-"79
-[v led_turn_off@led led `*.39CS24  1 p 2 10 ]
-"90
-[v led_turn_off@F2889 F2889 `S29  1 s 1 F2889 ]
-"100
+"275
+[s S66 . 6 `S24 1 lcd_rs 1 0 `S24 1 lcd_en 1 1 `[4]S24 1 lcd_data 4 2 ]
+[v lcd_4bit_set_cursor@lcd lcd `*.39CS66  1 p 2 19 ]
+[v lcd_4bit_set_cursor@row row `uc  1 p 1 21 ]
+[v lcd_4bit_set_cursor@column column `uc  1 p 1 22 ]
+"287
 } 0
-"84 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\MCAL_LAYER/GPIO/HAL_GPIO.c
+"133
+[v _lcd_init_8bit lcd_init_8bit `(uc  1 e 1 0 ]
+{
+"134
+[v lcd_init_8bit@ret ret `uc  1 a 1 24 ]
+"135
+[v lcd_init_8bit@index index `uc  1 a 1 23 ]
+[s S24 . 1 `uc 1 Port 1 0 :3:0 
+`uc 1 Pin_Number 1 0 :3:3 
+`uc 1 Direction 1 0 :1:6 
+`uc 1 Logic 1 0 :1:7 
+]
+"133
+[s S95 . 10 `S24 1 lcd_rs 1 0 `S24 1 lcd_en 1 1 `[8]S24 1 lcd_data 8 2 ]
+[v lcd_init_8bit@lcd lcd `*.39CS95  1 p 2 19 ]
+"162
+} 0
+"163
+[v _lcd_send_command_8bit lcd_send_command_8bit `(uc  1 e 1 0 ]
+{
+"165
+[v lcd_send_command_8bit@index index `uc  1 a 1 18 ]
+"164
+[v lcd_send_command_8bit@ret ret `uc  1 a 1 17 ]
+[s S24 . 1 `uc 1 Port 1 0 :3:0 
+`uc 1 Pin_Number 1 0 :3:3 
+`uc 1 Direction 1 0 :1:6 
+`uc 1 Logic 1 0 :1:7 
+]
+"163
+[s S95 . 10 `S24 1 lcd_rs 1 0 `S24 1 lcd_en 1 1 `[8]S24 1 lcd_data 8 2 ]
+[v lcd_send_command_8bit@lcd lcd `*.39CS95  1 p 2 10 ]
+[v lcd_send_command_8bit@command command `uc  1 p 1 12 ]
+"183
+} 0
+"4
+[v _lcd_init_4bit lcd_init_4bit `(uc  1 e 1 0 ]
+{
+"5
+[v lcd_init_4bit@ret ret `uc  1 a 1 24 ]
+"6
+[v lcd_init_4bit@index index `uc  1 a 1 23 ]
+[s S24 . 1 `uc 1 Port 1 0 :3:0 
+`uc 1 Pin_Number 1 0 :3:3 
+`uc 1 Direction 1 0 :1:6 
+`uc 1 Logic 1 0 :1:7 
+]
+"4
+[s S66 . 6 `S24 1 lcd_rs 1 0 `S24 1 lcd_en 1 1 `[4]S24 1 lcd_data 4 2 ]
+[v lcd_init_4bit@lcd lcd `*.39CS66  1 p 2 19 ]
+"32
+} 0
+"33
+[v _lcd_send_command_4bit lcd_send_command_4bit `(uc  1 e 1 0 ]
+{
+"35
+[v lcd_send_command_4bit@index index `uc  1 a 1 18 ]
+"34
+[v lcd_send_command_4bit@ret ret `uc  1 a 1 17 ]
+[s S24 . 1 `uc 1 Port 1 0 :3:0 
+`uc 1 Pin_Number 1 0 :3:3 
+`uc 1 Direction 1 0 :1:6 
+`uc 1 Logic 1 0 :1:7 
+]
+"33
+[s S66 . 6 `S24 1 lcd_rs 1 0 `S24 1 lcd_en 1 1 `[4]S24 1 lcd_data 4 2 ]
+[v lcd_send_command_4bit@lcd lcd `*.39CS66  1 p 2 10 ]
+[v lcd_send_command_4bit@command command `uc  1 p 1 12 ]
+"59
+} 0
+"170 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\MCAL_LAYER/GPIO/HAL_GPIO.c
+[v _gpio_pin_init gpio_pin_init `(uc  1 e 1 0 ]
+{
+"172
+[v gpio_pin_init@ret ret `uc  1 a 1 13 ]
+[s S24 . 1 `uc 1 Port 1 0 :3:0 
+`uc 1 Pin_Number 1 0 :3:3 
+`uc 1 Direction 1 0 :1:6 
+`uc 1 Logic 1 0 :1:7 
+]
+"170
+[v gpio_pin_init@_pin_config _pin_config `*.39CS24  1 p 2 10 ]
+"187
+} 0
+"84
 [v _gpio_pin_write_logic gpio_pin_write_logic `(uc  1 e 1 0 ]
 {
 "85
 [v gpio_pin_write_logic@ret ret `uc  1 a 1 9 ]
-[s S29 . 1 `uc 1 Port 1 0 :3:0 
+[s S24 . 1 `uc 1 Port 1 0 :3:0 
 `uc 1 Pin_Number 1 0 :3:3 
 `uc 1 Direction 1 0 :1:6 
 `uc 1 Logic 1 0 :1:7 
 ]
 "84
-[v gpio_pin_write_logic@_pin_config _pin_config `*.39CS29  1 p 2 0 ]
+[v gpio_pin_write_logic@_pin_config _pin_config `*.39CS24  1 p 2 0 ]
 [v gpio_pin_write_logic@logic logic `E2798  1 p 1 2 ]
 "109
 } 0
-"17 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\ECU_LAYER/LED/ECU_LED.c
-[v _led_init led_init `(uc  1 e 1 0 ]
-{
-[s S29 . 1 `uc 1 Port 1 0 :3:0 
-`uc 1 Pin_Number 1 0 :3:3 
-`uc 1 Direction 1 0 :1:6 
-`uc 1 Logic 1 0 :1:7 
-]
-"29
-[v led_init@Pin_obj Pin_obj `S29  1 a 1 13 ]
-"18
-[v led_init@ret ret `uc  1 a 1 12 ]
-[s S24 . 1 `uc 1 port 1 0 :3:0 
-`uc 1 pin 1 0 :3:3 
-`uc 1 led_status 1 0 :1:6 
-`uc 1 reserved 1 0 :1:7 
-]
-"17
-[v led_init@led led `*.39CS24  1 p 2 9 ]
-"28
-[v led_init@F2879 F2879 `S29  1 s 1 F2879 ]
-"38
-} 0
-"22 C:\Users\Aly Ahmed\Desktop\8_bit_Microcontroller_Interface\MCAL_LAYER/GPIO/HAL_GPIO.c
+"22
 [v _gpio_pin_direction_init gpio_pin_direction_init `(uc  1 e 1 0 ]
 {
 "23
 [v gpio_pin_direction_init@ret ret `uc  1 a 1 8 ]
-[s S29 . 1 `uc 1 Port 1 0 :3:0 
+[s S24 . 1 `uc 1 Port 1 0 :3:0 
 `uc 1 Pin_Number 1 0 :3:3 
 `uc 1 Direction 1 0 :1:6 
 `uc 1 Logic 1 0 :1:7 
 ]
 "22
-[v gpio_pin_direction_init@_pin_config _pin_config `*.39CS29  1 p 2 0 ]
+[v gpio_pin_direction_init@_pin_config _pin_config `*.39CS24  1 p 2 0 ]
 "47
 } 0

@@ -1,4 +1,4 @@
-# 1 "Application.c"
+# 1 "MCAL_LAYER/GPIO/HAL_GPIO.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,20 +6,16 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "Application.c" 2
+# 1 "MCAL_LAYER/GPIO/HAL_GPIO.c" 2
 
 
 
 
 
 
-# 1 "./ECU_LAYER/CHAR_LCD/ECU_CHAR_LCD.h" 1
-# 12 "./ECU_LAYER/CHAR_LCD/ECU_CHAR_LCD.h"
-# 1 "./ECU_LAYER/CHAR_LCD/ECU_CHAR_LCD_CONFIG.h" 1
-# 12 "./ECU_LAYER/CHAR_LCD/ECU_CHAR_LCD.h" 2
 
-# 1 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/HAL_GPIO.h" 1
-# 13 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/HAL_GPIO.h"
+# 1 "MCAL_LAYER/GPIO/HAL_GPIO.h" 1
+# 13 "MCAL_LAYER/GPIO/HAL_GPIO.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\proc\\../../../pic/include/proc/pic18f4620.h" 1 3
 # 45 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\proc\\../../../pic/include/proc/pic18f4620.h" 3
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\__at.h" 1 3
@@ -4232,12 +4228,12 @@ extern volatile __bit nWR __attribute__((address(0x7C21)));
 
 
 extern volatile __bit nWRITE __attribute__((address(0x7E3A)));
-# 13 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/HAL_GPIO.h" 2
+# 13 "MCAL_LAYER/GPIO/HAL_GPIO.h" 2
 
-# 1 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/../MCAL_STD_TYPES.h" 1
-# 13 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/../MCAL_STD_TYPES.h"
-# 1 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/../COMPILER.h" 1
-# 13 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/../COMPILER.h"
+# 1 "MCAL_LAYER/GPIO/../MCAL_STD_TYPES.h" 1
+# 13 "MCAL_LAYER/GPIO/../MCAL_STD_TYPES.h"
+# 1 "MCAL_LAYER/GPIO/../COMPILER.h" 1
+# 13 "MCAL_LAYER/GPIO/../COMPILER.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -4492,11 +4488,11 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\xc.h" 2 3
-# 13 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/../COMPILER.h" 2
-# 13 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/../MCAL_STD_TYPES.h" 2
+# 13 "MCAL_LAYER/GPIO/../COMPILER.h" 2
+# 13 "MCAL_LAYER/GPIO/../MCAL_STD_TYPES.h" 2
 
-# 1 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/../STD_LIBRARIES.h" 1
-# 13 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/../STD_LIBRARIES.h"
+# 1 "MCAL_LAYER/GPIO/../STD_LIBRARIES.h" 1
+# 13 "MCAL_LAYER/GPIO/../STD_LIBRARIES.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 1 3
@@ -4641,8 +4637,8 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 13 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/../STD_LIBRARIES.h" 2
-# 14 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/../MCAL_STD_TYPES.h" 2
+# 13 "MCAL_LAYER/GPIO/../STD_LIBRARIES.h" 2
+# 14 "MCAL_LAYER/GPIO/../MCAL_STD_TYPES.h" 2
 
 
 
@@ -4655,14 +4651,14 @@ typedef signed short sint16_t ;
 typedef signed long sint32_t ;
 
 typedef uint8_t Std_ReturnType ;
-# 14 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/HAL_GPIO.h" 2
+# 14 "MCAL_LAYER/GPIO/HAL_GPIO.h" 2
 
-# 1 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/../DEVICE_CONFIG.h" 1
-# 15 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/HAL_GPIO.h" 2
+# 1 "MCAL_LAYER/GPIO/../DEVICE_CONFIG.h" 1
+# 15 "MCAL_LAYER/GPIO/HAL_GPIO.h" 2
 
-# 1 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/HAL_GPIO_CFG.h" 1
-# 16 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/HAL_GPIO.h" 2
-# 39 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/HAL_GPIO.h"
+# 1 "MCAL_LAYER/GPIO/HAL_GPIO_CFG.h" 1
+# 16 "MCAL_LAYER/GPIO/HAL_GPIO.h" 2
+# 39 "MCAL_LAYER/GPIO/HAL_GPIO.h"
 typedef enum {
     GPIO_LOW = 0,
     GPIO_HIGH
@@ -4710,131 +4706,198 @@ Std_ReturnType gpio_port_get_direction_status(portIndex_t port,uint8_t *directio
 Std_ReturnType gpio_port_write_logic(portIndex_t port,uint8_t logic);
 Std_ReturnType gpio_port_read_logic(portIndex_t port,uint8_t *logic);
 Std_ReturnType gpio_port_toggle_logic(portIndex_t port);
-# 13 "./ECU_LAYER/CHAR_LCD/ECU_CHAR_LCD.h" 2
-# 42 "./ECU_LAYER/CHAR_LCD/ECU_CHAR_LCD.h"
-typedef struct{
-  pinConfig_t lcd_rs ;
-  pinConfig_t lcd_en ;
-  pinConfig_t lcd_data[4];
-}char_lcd_4bit_t;
-
-typedef struct{
-  pinConfig_t lcd_rs ;
-  pinConfig_t lcd_en ;
-  pinConfig_t lcd_data[8];
-}char_lcd_8bit_t;
+# 8 "MCAL_LAYER/GPIO/HAL_GPIO.c" 2
 
 
-Std_ReturnType lcd_init_4bit(const char_lcd_4bit_t *lcd);
-Std_ReturnType lcd_send_command_4bit(const char_lcd_4bit_t *lcd, uint8_t command);
-Std_ReturnType lcd_send_data_4bit(const char_lcd_4bit_t *lcd, uint8_t data);
-Std_ReturnType lcd_send_data_pos_4bit(const char_lcd_4bit_t *lcd, uint8_t data,uint8_t column,uint8_t row);
-Std_ReturnType lcd_send_string_4bit(const char_lcd_4bit_t *lcd, uint8_t *str);
-Std_ReturnType lcd_send_string_pos_4bit(const char_lcd_4bit_t *lcd, uint8_t *str,uint8_t column,uint8_t row);
-
-Std_ReturnType lcd_init_8bit(const char_lcd_8bit_t *lcd);
-Std_ReturnType lcd_send_command_8bit(const char_lcd_8bit_t *lcd, uint8_t command);
-Std_ReturnType lcd_send_data_8bit(const char_lcd_8bit_t *lcd, uint8_t data);
-Std_ReturnType lcd_send_data_pos_8bit(const char_lcd_8bit_t *lcd, uint8_t data,uint8_t column,uint8_t row);
-Std_ReturnType lcd_send_string_8bit(const char_lcd_8bit_t *lcd, uint8_t *str);
-Std_ReturnType lcd_send_string_pos_8bit(const char_lcd_8bit_t *lcd, uint8_t *str,uint8_t column,uint8_t row);
-
-void convert_byte_to_string(uint8_t val,uint8_t *str);
-void convert_short_to_string(uint16_t val,uint8_t *str);
-void convert_int_to_string(uint32_t val,uint8_t *str);
-# 7 "Application.c" 2
-
-char_lcd_4bit_t lcd1 = {
-   .lcd_rs = {
-       .Port = PORTC_INDEX ,
-       .Direction = GPIO_OUTPUT ,
-       .Pin_Number = GPIO_PIN0 ,
-       .Logic = GPIO_LOW
-   },
-   .lcd_en = {
-       .Port = PORTC_INDEX ,
-       .Direction = GPIO_OUTPUT ,
-       .Pin_Number = GPIO_PIN1 ,
-       .Logic = GPIO_LOW
-   },
-   .lcd_data[0].Port = PORTC_INDEX ,
-   .lcd_data[0].Direction = GPIO_OUTPUT ,
-   .lcd_data[0].Pin_Number = GPIO_PIN2 ,
-   .lcd_data[0].Logic = GPIO_LOW ,
-   .lcd_data[1].Port = PORTC_INDEX ,
-   .lcd_data[1].Direction = GPIO_OUTPUT ,
-   .lcd_data[1].Pin_Number = GPIO_PIN3 ,
-   .lcd_data[1].Logic = GPIO_LOW ,
-   .lcd_data[2].Port = PORTC_INDEX ,
-   .lcd_data[2].Direction = GPIO_OUTPUT ,
-   .lcd_data[2].Pin_Number = GPIO_PIN4 ,
-   .lcd_data[2].Logic = GPIO_LOW ,
-   .lcd_data[3].Port = PORTC_INDEX ,
-   .lcd_data[3].Direction = GPIO_OUTPUT ,
-   .lcd_data[3].Pin_Number = GPIO_PIN5 ,
-   .lcd_data[3].Logic = GPIO_LOW
-};
-char_lcd_8bit_t lcd2 = {
-   .lcd_rs = {
-       .Port = PORTC_INDEX ,
-       .Direction = GPIO_OUTPUT ,
-       .Pin_Number = GPIO_PIN6 ,
-       .Logic = GPIO_LOW
-   },
-   .lcd_en = {
-       .Port = PORTC_INDEX ,
-       .Direction = GPIO_OUTPUT ,
-       .Pin_Number = GPIO_PIN7 ,
-       .Logic = GPIO_LOW
-   },
-   .lcd_data[0].Port = PORTD_INDEX ,
-   .lcd_data[0].Direction = GPIO_OUTPUT ,
-   .lcd_data[0].Pin_Number = GPIO_PIN0,
-   .lcd_data[0].Logic = GPIO_LOW ,
-   .lcd_data[1].Port = PORTD_INDEX ,
-   .lcd_data[1].Direction = GPIO_OUTPUT ,
-   .lcd_data[1].Pin_Number = GPIO_PIN1,
-   .lcd_data[1].Logic = GPIO_LOW ,
-   .lcd_data[2].Port = PORTD_INDEX ,
-   .lcd_data[2].Direction = GPIO_OUTPUT ,
-   .lcd_data[2].Pin_Number = GPIO_PIN2,
-   .lcd_data[2].Logic = GPIO_LOW ,
-   .lcd_data[3].Port = PORTD_INDEX ,
-   .lcd_data[3].Direction = GPIO_OUTPUT ,
-   .lcd_data[3].Pin_Number = GPIO_PIN3,
-   .lcd_data[3].Logic = GPIO_LOW ,
-   .lcd_data[4].Port = PORTD_INDEX ,
-   .lcd_data[4].Direction = GPIO_OUTPUT ,
-   .lcd_data[4].Pin_Number = GPIO_PIN4,
-   .lcd_data[4].Logic = GPIO_LOW ,
-   .lcd_data[5].Port = PORTD_INDEX ,
-   .lcd_data[5].Direction = GPIO_OUTPUT ,
-   .lcd_data[5].Pin_Number = GPIO_PIN5,
-   .lcd_data[5].Logic = GPIO_LOW ,
-   .lcd_data[6].Port = PORTD_INDEX ,
-   .lcd_data[6].Direction = GPIO_OUTPUT ,
-   .lcd_data[6].Pin_Number = GPIO_PIN6,
-   .lcd_data[6].Logic = GPIO_LOW ,
-   .lcd_data[7].Port = PORTD_INDEX ,
-   .lcd_data[7].Direction = GPIO_OUTPUT ,
-   .lcd_data[7].Pin_Number = GPIO_PIN7,
-   .lcd_data[7].Logic = GPIO_LOW ,
-};
-int main() {
-    Std_ReturnType ret = (Std_ReturnType)0x00 ;
-    ret= lcd_init_4bit(&lcd1);
-    ret= lcd_init_8bit(&lcd2);
-    ret= lcd_send_data_8bit(&lcd2,'A');
-    ret= lcd_send_data_pos_8bit(&lcd2,'L',5,1);
-    ret= lcd_send_data_pos_8bit(&lcd2,'Y',10,2);
-    ret= lcd_send_string_pos_8bit(&lcd2,"AHMED",0,3);
-    ret= lcd_send_data_4bit(&lcd1,'A');
-    ret= lcd_send_data_pos_4bit(&lcd1,'L',5,1);
-    ret= lcd_send_data_pos_4bit(&lcd1,'Y',10,2);
-    ret= lcd_send_string_pos_4bit(&lcd1,"AHMED",0,3);
-    while(1)
+volatile uint8_t *tris_registers[] = {&TRISA, &TRISB, &TRISC, &TRISD, &TRISE};
+volatile uint8_t *port_registers[] = {&PORTA, &PORTB, &PORTC, &PORTD, &PORTE};
+volatile uint8_t *lat_registers[] = {&LATA, &LATB, &LATC, &LATD, &LATE};
+# 22 "MCAL_LAYER/GPIO/HAL_GPIO.c"
+Std_ReturnType gpio_pin_direction_init(const pinConfig_t *_pin_config){
+    Std_ReturnType ret = (Std_ReturnType)0x01 ;
+    if(((void*)0) == _pin_config)
     {
-
+       ret = (Std_ReturnType)0x00 ;
     }
-    return (0);
+    else if(_pin_config->Pin_Number > 0x08 -1 || _pin_config->Port >= 0x05 -1)
+    {
+        ret = (Std_ReturnType)0x00 ;
+    }
+    else
+    {
+        switch(_pin_config->Direction)
+        {
+            case (GPIO_OUTPUT) :
+                (*tris_registers[_pin_config->Port] &= ~((uint8_t)1<<_pin_config->Pin_Number));
+                break;
+            case (GPIO_INPUT) :
+                (*tris_registers[_pin_config->Port] |= ((uint8_t)1<<_pin_config->Pin_Number));
+                break;
+            default :
+                ret = (Std_ReturnType)0x00 ;
+        }
+    }
+    return ret ;
+}
+# 58 "MCAL_LAYER/GPIO/HAL_GPIO.c"
+Std_ReturnType gpio_pin_get_direction_status(const pinConfig_t *_pin_config,direction_t *direction_status){
+    Std_ReturnType ret = (Std_ReturnType)0x01 ;
+    if(((void*)0) == _pin_config || ((void*)0) == direction_status)
+    {
+       ret = (Std_ReturnType)0x00 ;
+    }
+    else if(_pin_config->Pin_Number > 0x08 -1 || _pin_config->Port >= 0x05 -1)
+    {
+        ret = (Std_ReturnType)0x00 ;
+    }
+    else
+    {
+        *direction_status = ((*tris_registers[_pin_config->Port] >> _pin_config->Pin_Number) & (uint8_t)1);
+    }
+    return ret ;
+}
+# 84 "MCAL_LAYER/GPIO/HAL_GPIO.c"
+Std_ReturnType gpio_pin_write_logic(const pinConfig_t *_pin_config,logic_t logic){
+    Std_ReturnType ret = (Std_ReturnType)0x01 ;
+    if(((void*)0) == _pin_config)
+    {
+       ret = (Std_ReturnType)0x00 ;
+    }
+    else if(_pin_config->Pin_Number > 0x08 -1 || _pin_config->Port >= 0x05 -1)
+    {
+        ret = (Std_ReturnType)0x00 ;
+    }
+    else
+    {
+        switch(logic)
+        {
+            case (GPIO_LOW) :
+                (*lat_registers[_pin_config->Port] &= ~((uint8_t)1<<_pin_config->Pin_Number));
+                break;
+            case (GPIO_HIGH) :
+                (*lat_registers[_pin_config->Port] |= ((uint8_t)1<<_pin_config->Pin_Number));
+                break;
+            default :
+                ret = (Std_ReturnType)0x00 ;
+        }
+    }
+    return ret ;
+}
+# 120 "MCAL_LAYER/GPIO/HAL_GPIO.c"
+Std_ReturnType gpio_pin_read_logic(const pinConfig_t *_pin_config,logic_t *logic){
+    Std_ReturnType ret = (Std_ReturnType)0x01 ;
+    if(((void*)0) == _pin_config || ((void*)0) == logic)
+    {
+       ret = (Std_ReturnType)0x00 ;
+    }
+    else if(_pin_config->Pin_Number > 0x08 -1 || _pin_config->Port >= 0x05 -1)
+    {
+        ret = (Std_ReturnType)0x00 ;
+    }
+    else
+    {
+        *logic = ((*port_registers[_pin_config->Port] >> _pin_config->Pin_Number) & (uint8_t)1);
+    }
+    return ret ;
+}
+# 145 "MCAL_LAYER/GPIO/HAL_GPIO.c"
+Std_ReturnType gpio_pin_toggle_logic(const pinConfig_t *_pin_config){
+    Std_ReturnType ret = (Std_ReturnType)0x01 ;
+    if(((void*)0) == _pin_config)
+    {
+       ret = (Std_ReturnType)0x00 ;
+    }
+    else if(_pin_config->Pin_Number > 0x08 -1 || _pin_config->Port >= 0x05 -1)
+    {
+       ret = (Std_ReturnType)0x00 ;
+    }
+    else
+    {
+        (*lat_registers[_pin_config->Port] ^= ((uint8_t)1<<_pin_config->Pin_Number));
+    }
+    return ret ;
+}
+# 170 "MCAL_LAYER/GPIO/HAL_GPIO.c"
+Std_ReturnType gpio_pin_init(const pinConfig_t *_pin_config)
+{
+    Std_ReturnType ret = (Std_ReturnType)0x01 ;
+    if(((void*)0) == _pin_config)
+    {
+       ret = (Std_ReturnType)0x00 ;
+    }
+    else if(_pin_config->Pin_Number > 0x08 -1 || _pin_config->Port >= 0x05 -1)
+    {
+       ret = (Std_ReturnType)0x00 ;
+    }
+    else
+    {
+        ret = gpio_pin_direction_init(_pin_config);
+        ret = gpio_pin_write_logic(_pin_config,_pin_config->Logic);
+    }
+    return ret ;
+}
+# 199 "MCAL_LAYER/GPIO/HAL_GPIO.c"
+Std_ReturnType gpio_port_direction_init(portIndex_t port, uint8_t direction){
+    Std_ReturnType ret = (Std_ReturnType)0x01 ;
+    if(port > 0x05 -1)
+    {
+        ret = (Std_ReturnType)0x00 ;
+    }
+    else
+    {
+        *tris_registers[port] = direction ;
+    }
+    return ret ;
+}
+# 221 "MCAL_LAYER/GPIO/HAL_GPIO.c"
+Std_ReturnType gpio_port_get_direction_status(portIndex_t port,uint8_t *direction_status){
+    Std_ReturnType ret = (Std_ReturnType)0x01 ;
+    if(port > 0x05 -1 || ((void*)0) == direction_status)
+    {
+        ret = (Std_ReturnType)0x00 ;
+    }
+    else
+    {
+        *direction_status = *tris_registers[port] ;
+    }
+    return ret ;
+}
+# 243 "MCAL_LAYER/GPIO/HAL_GPIO.c"
+Std_ReturnType gpio_port_write_logic(portIndex_t port,uint8_t logic){
+    Std_ReturnType ret = (Std_ReturnType)0x01 ;
+    if(port > 0x05 -1)
+    {
+        ret = (Std_ReturnType)0x00 ;
+    }
+    else
+    {
+        *lat_registers[port] = logic;
+    }
+    return ret ;
+}
+# 265 "MCAL_LAYER/GPIO/HAL_GPIO.c"
+Std_ReturnType gpio_port_read_logic(portIndex_t port,uint8_t *logic){
+    Std_ReturnType ret = (Std_ReturnType)0x01 ;
+    if(port > 0x05 -1 || ((void*)0) == logic)
+    {
+        ret = (Std_ReturnType)0x00 ;
+    }
+    else
+    {
+        *logic = *port_registers[port] ;
+    }
+    return ret ;
+}
+# 286 "MCAL_LAYER/GPIO/HAL_GPIO.c"
+Std_ReturnType gpio_port_toggle_logic(portIndex_t port){
+    Std_ReturnType ret = (Std_ReturnType)0x01 ;
+    if(port > 0x05 -1)
+    {
+        ret = (Std_ReturnType)0x00 ;
+    }
+    else
+    {
+        *lat_registers[port] ^= 0xFF ;
+    }
+    return ret ;
 }
