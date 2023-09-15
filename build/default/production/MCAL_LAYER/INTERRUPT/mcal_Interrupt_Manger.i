@@ -4732,19 +4732,9 @@ typedef struct{
     pinConfig_t PIN ;
     void (*EX_Int_Handler)(void);
 }Inturrupt_INTx_t;
-
-typedef struct{
-    Interrupt_priority_cfg PRIORITY ;
-    pinConfig_t PIN ;
-    void (*EX_Int_Handler)(void);
-}Inturrupt_RBx_t;
-
-
-Std_ReturnType Interrupt_INTx_Start(const Inturrupt_INTx_t *Int_Obj);
+# 81 "MCAL_LAYER/INTERRUPT/mcal_External_Interrupt.h"
+Std_ReturnType Interrupt_INTx_Init(const Inturrupt_INTx_t *Int_Obj);
 Std_ReturnType Interrupt_INTx_Stop(const Inturrupt_INTx_t *Int_Obj );
-
-Std_ReturnType Interrupt_RBx_Start(const Inturrupt_RBx_t *Int_Obj);
-Std_ReturnType Interrupt_RBx_Stop(const Inturrupt_RBx_t *Int_Obj );
 # 14 "MCAL_LAYER/INTERRUPT/mcal_Interrupt_Manager.h" 2
 
 # 1 "MCAL_LAYER/INTERRUPT/mcal_Internal_Interrupt.h" 1

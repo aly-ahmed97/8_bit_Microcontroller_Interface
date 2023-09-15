@@ -17,8 +17,6 @@ static Std_ReturnType Set_INT2_Interrupt_Handller(void (*Int_Interrupt_Handller)
 
 static Std_ReturnType Set_INTx_Interrupt_Handller(const Inturrupt_INTx_t *Int_Obj);
 
-static Std_ReturnType Interrupt_RBx_Priority_Init(const Inturrupt_RBx_t *Int_Obj );
-
 /**
  * @BRIEF Function to start exertrnal Interrupt
  * @param Int_Obj : Pointer to the PIN COnfigutations 
@@ -46,7 +44,7 @@ Std_ReturnType Interrupt_INTx_Init(const Inturrupt_INTx_t *Int_Obj){
     }
     return ret ;
 }
-Std_ReturnType Interrupt_RBx_Init(const Inturrupt_RBx_t *Int_Obj){
+/*Std_ReturnType Interrupt_RBx_Init(const Inturrupt_RBx_t *Int_Obj){
     Std_ReturnType ret = E_OK ;
     if(NULL == Int_Obj)
     {
@@ -63,7 +61,7 @@ Std_ReturnType Interrupt_RBx_Init(const Inturrupt_RBx_t *Int_Obj){
         ret = PORTB_OnChange_InterruptEnable();
     }
     return ret ;
-}
+}*/
 static Std_ReturnType Interrupt_INTx_Enable(const Inturrupt_INTx_t *Int_Obj ){
     Std_ReturnType ret = E_OK ;
     if(NULL == Int_Obj)
@@ -295,34 +293,5 @@ void INT2_ISR(void){
     {
         Int2_Interrupt_Handller();
     }
-}
-
-static Std_ReturnType Interrupt_RBx_Priority_Init(const Inturrupt_RBx_t *Int_Obj ){
-    Std_ReturnType ret = E_OK ;
-    if(NULL == Int_Obj)
-    {
-        ret = E_NOT_OK ;
-    }
-    else
-    {
-        switch(Int_Obj->PRIORITY){
-                        case (HIGH_Priority) :    PORTB_OnChange_HighPrioritySet();   break;
-                        case (LOW_Priority):      PORTB_OnChange_LowPrioritySet();    break;
-                        default : ret = E_NOT_OK ;
-                }
-    }
-    return ret ;
-}
-static Std_ReturnType Interrupt_RBx_Pin_Init(const Inturrupt_RBx_t *Int_Obj ){
-    Std_ReturnType ret = E_OK ;
-    if(NULL == Int_Obj)
-    {
-        ret = E_NOT_OK ;
-    }
-    else
-    {
-        
-    }
-    return ret ;
 }
 

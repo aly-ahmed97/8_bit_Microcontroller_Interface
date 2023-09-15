@@ -43,7 +43,7 @@
 
     #endif
 #endif
-#if INTURRUPT_EXTERNAL_ONCHANGE_FEATURE_ENABLE == INTURRUPT_FEATURE_ENABLE
+/* #if INTURRUPT_EXTERNAL_ONCHANGE_FEATURE_ENABLE == INTURRUPT_FEATURE_ENABLE
     #define   PORTB_OnChange_InterruptDisable()            (INTCONbits.RBIE =    0x00)
     #define   PORTB_OnChange_InterruptEnable()             (INTCONbits.RBIE =    0x01)
     #define   PORTB_OnChange_InterruptFlagClear()          (INTCONbits.RBIF =    0x00)
@@ -51,7 +51,7 @@
         #define PORTB_OnChange_HighPrioritySet() (INTCON2bits.RBIP = 0x01)
         #define PORTB_OnChange_LowPrioritySet()  (INTCON2bits.RBIP = 0x00)
     #endif
-#endif
+#endif */
 /* Data Types Section*/
 typedef enum{
     FALLING_EDGE = 0,
@@ -69,19 +69,20 @@ typedef struct{
     pinConfig_t             PIN      ;
     void                    (*EX_Int_Handler)(void);
 }Inturrupt_INTx_t;
-
+/*
 typedef struct{
     Interrupt_priority_cfg  PRIORITY ;
     pinConfig_t             PIN      ;
     void                    (*EX_Int_Handler)(void);
 }Inturrupt_RBx_t;
+ * */
 /* Functions Declarations Section */
 
 Std_ReturnType Interrupt_INTx_Init(const Inturrupt_INTx_t *Int_Obj);
 Std_ReturnType Interrupt_INTx_Stop(const Inturrupt_INTx_t *Int_Obj );
-
+/*
 Std_ReturnType Interrupt_RBx_Init(const Inturrupt_RBx_t *Int_Obj);
 Std_ReturnType Interrupt_RBx_Stop(const Inturrupt_RBx_t *Int_Obj );
-
+*/
 #endif	/* MCAL_EXTERNALL_INTERRUPT_H */
 

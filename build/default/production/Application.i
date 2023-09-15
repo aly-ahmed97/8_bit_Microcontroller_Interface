@@ -13,13 +13,10 @@
 
 
 
-# 1 "./ECU_LAYER/CHAR_LCD/ECU_CHAR_LCD.h" 1
-# 12 "./ECU_LAYER/CHAR_LCD/ECU_CHAR_LCD.h"
-# 1 "./ECU_LAYER/CHAR_LCD/ECU_CHAR_LCD_CONFIG.h" 1
-# 12 "./ECU_LAYER/CHAR_LCD/ECU_CHAR_LCD.h" 2
-
-# 1 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/HAL_GPIO.h" 1
-# 13 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/HAL_GPIO.h"
+# 1 "./ECU_LAYER/LED/ECU_LED.h" 1
+# 14 "./ECU_LAYER/LED/ECU_LED.h"
+# 1 "./ECU_LAYER/LED/../../MCAL_LAYER/GPIO/HAL_GPIO.h" 1
+# 13 "./ECU_LAYER/LED/../../MCAL_LAYER/GPIO/HAL_GPIO.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\proc\\../../../pic/include/proc/pic18f4620.h" 1 3
 # 45 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\proc\\../../../pic/include/proc/pic18f4620.h" 3
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\__at.h" 1 3
@@ -4232,12 +4229,12 @@ extern volatile __bit nWR __attribute__((address(0x7C21)));
 
 
 extern volatile __bit nWRITE __attribute__((address(0x7E3A)));
-# 13 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/HAL_GPIO.h" 2
+# 13 "./ECU_LAYER/LED/../../MCAL_LAYER/GPIO/HAL_GPIO.h" 2
 
-# 1 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/../MCAL_STD_TYPES.h" 1
-# 13 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/../MCAL_STD_TYPES.h"
-# 1 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/../COMPILER.h" 1
-# 13 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/../COMPILER.h"
+# 1 "./ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../MCAL_STD_TYPES.h" 1
+# 13 "./ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../MCAL_STD_TYPES.h"
+# 1 "./ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../COMPILER.h" 1
+# 13 "./ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../COMPILER.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -4492,11 +4489,11 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\xc.h" 2 3
-# 13 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/../COMPILER.h" 2
-# 13 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/../MCAL_STD_TYPES.h" 2
+# 13 "./ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../COMPILER.h" 2
+# 13 "./ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../MCAL_STD_TYPES.h" 2
 
-# 1 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/../STD_LIBRARIES.h" 1
-# 13 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/../STD_LIBRARIES.h"
+# 1 "./ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../STD_LIBRARIES.h" 1
+# 13 "./ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../STD_LIBRARIES.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 1 3
@@ -4641,8 +4638,8 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 13 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/../STD_LIBRARIES.h" 2
-# 14 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/../MCAL_STD_TYPES.h" 2
+# 13 "./ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../STD_LIBRARIES.h" 2
+# 14 "./ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../MCAL_STD_TYPES.h" 2
 
 
 
@@ -4655,14 +4652,14 @@ typedef signed short sint16_t ;
 typedef signed long sint32_t ;
 
 typedef uint8_t Std_ReturnType ;
-# 14 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/HAL_GPIO.h" 2
+# 14 "./ECU_LAYER/LED/../../MCAL_LAYER/GPIO/HAL_GPIO.h" 2
 
-# 1 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/../DEVICE_CONFIG.h" 1
-# 15 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/HAL_GPIO.h" 2
+# 1 "./ECU_LAYER/LED/../../MCAL_LAYER/GPIO/../DEVICE_CONFIG.h" 1
+# 15 "./ECU_LAYER/LED/../../MCAL_LAYER/GPIO/HAL_GPIO.h" 2
 
-# 1 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/HAL_GPIO_CFG.h" 1
-# 16 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/HAL_GPIO.h" 2
-# 39 "./ECU_LAYER/CHAR_LCD/../../MCAL_LAYER/GPIO/HAL_GPIO.h"
+# 1 "./ECU_LAYER/LED/../../MCAL_LAYER/GPIO/HAL_GPIO_CFG.h" 1
+# 16 "./ECU_LAYER/LED/../../MCAL_LAYER/GPIO/HAL_GPIO.h" 2
+# 39 "./ECU_LAYER/LED/../../MCAL_LAYER/GPIO/HAL_GPIO.h"
 typedef enum {
     GPIO_LOW = 0,
     GPIO_HIGH
@@ -4710,131 +4707,107 @@ Std_ReturnType gpio_port_get_direction_status(portIndex_t port,uint8_t *directio
 Std_ReturnType gpio_port_write_logic(portIndex_t port,uint8_t logic);
 Std_ReturnType gpio_port_read_logic(portIndex_t port,uint8_t *logic);
 Std_ReturnType gpio_port_toggle_logic(portIndex_t port);
-# 13 "./ECU_LAYER/CHAR_LCD/ECU_CHAR_LCD.h" 2
-# 42 "./ECU_LAYER/CHAR_LCD/ECU_CHAR_LCD.h"
-typedef struct{
-  pinConfig_t lcd_rs ;
-  pinConfig_t lcd_en ;
-  pinConfig_t lcd_data[4];
-}char_lcd_4bit_t;
+# 14 "./ECU_LAYER/LED/ECU_LED.h" 2
+
+# 1 "./ECU_LAYER/LED/ECU_LED_CONFIG.h" 1
+# 15 "./ECU_LAYER/LED/ECU_LED.h" 2
+# 25 "./ECU_LAYER/LED/ECU_LED.h"
+typedef enum{
+    LED_OFF =0,
+    LED_ON
+}led_status;
 
 typedef struct{
-  pinConfig_t lcd_rs ;
-  pinConfig_t lcd_en ;
-  pinConfig_t lcd_data[8];
-}char_lcd_8bit_t;
+    uint8_t port :3 ;
+    uint8_t pin :3 ;
+    uint8_t led_status :1 ;
+    uint8_t reserved :1 ;
+}led_t;
 
 
-Std_ReturnType lcd_init_4bit(const char_lcd_4bit_t *lcd);
-Std_ReturnType lcd_send_command_4bit(const char_lcd_4bit_t *lcd, uint8_t command);
-Std_ReturnType lcd_send_data_4bit(const char_lcd_4bit_t *lcd, uint8_t data);
-Std_ReturnType lcd_send_data_pos_4bit(const char_lcd_4bit_t *lcd, uint8_t data,uint8_t column,uint8_t row);
-Std_ReturnType lcd_send_string_4bit(const char_lcd_4bit_t *lcd, uint8_t *str);
-Std_ReturnType lcd_send_string_pos_4bit(const char_lcd_4bit_t *lcd, uint8_t *str,uint8_t column,uint8_t row);
 
-Std_ReturnType lcd_init_8bit(const char_lcd_8bit_t *lcd);
-Std_ReturnType lcd_send_command_8bit(const char_lcd_8bit_t *lcd, uint8_t command);
-Std_ReturnType lcd_send_data_8bit(const char_lcd_8bit_t *lcd, uint8_t data);
-Std_ReturnType lcd_send_data_pos_8bit(const char_lcd_8bit_t *lcd, uint8_t data,uint8_t column,uint8_t row);
-Std_ReturnType lcd_send_string_8bit(const char_lcd_8bit_t *lcd, uint8_t *str);
-Std_ReturnType lcd_send_string_pos_8bit(const char_lcd_8bit_t *lcd, uint8_t *str,uint8_t column,uint8_t row);
-
-void convert_byte_to_string(uint8_t val,uint8_t *str);
-void convert_short_to_string(uint16_t val,uint8_t *str);
-void convert_int_to_string(uint32_t val,uint8_t *str);
+Std_ReturnType led_init(const led_t *led);
+Std_ReturnType led_turn_on(const led_t *led);
+Std_ReturnType led_turn_off(const led_t *led);
+Std_ReturnType led_toggle_state(const led_t *led);
 # 7 "Application.c" 2
 
-char_lcd_4bit_t lcd1 = {
-   .lcd_rs = {
-       .Port = PORTC_INDEX ,
-       .Direction = GPIO_OUTPUT ,
-       .Pin_Number = GPIO_PIN0 ,
-       .Logic = GPIO_LOW
-   },
-   .lcd_en = {
-       .Port = PORTC_INDEX ,
-       .Direction = GPIO_OUTPUT ,
-       .Pin_Number = GPIO_PIN1 ,
-       .Logic = GPIO_LOW
-   },
-   .lcd_data[0].Port = PORTC_INDEX ,
-   .lcd_data[0].Direction = GPIO_OUTPUT ,
-   .lcd_data[0].Pin_Number = GPIO_PIN2 ,
-   .lcd_data[0].Logic = GPIO_LOW ,
-   .lcd_data[1].Port = PORTC_INDEX ,
-   .lcd_data[1].Direction = GPIO_OUTPUT ,
-   .lcd_data[1].Pin_Number = GPIO_PIN3 ,
-   .lcd_data[1].Logic = GPIO_LOW ,
-   .lcd_data[2].Port = PORTC_INDEX ,
-   .lcd_data[2].Direction = GPIO_OUTPUT ,
-   .lcd_data[2].Pin_Number = GPIO_PIN4 ,
-   .lcd_data[2].Logic = GPIO_LOW ,
-   .lcd_data[3].Port = PORTC_INDEX ,
-   .lcd_data[3].Direction = GPIO_OUTPUT ,
-   .lcd_data[3].Pin_Number = GPIO_PIN5 ,
-   .lcd_data[3].Logic = GPIO_LOW
+# 1 "./MCAL_LAYER/INTERRUPT/mcal_Interrupt_Manager.h" 1
+# 13 "./MCAL_LAYER/INTERRUPT/mcal_Interrupt_Manager.h"
+# 1 "./MCAL_LAYER/INTERRUPT/mcal_Interrupt_config.h" 1
+# 16 "./MCAL_LAYER/INTERRUPT/mcal_Interrupt_config.h"
+# 1 "./MCAL_LAYER/INTERRUPT/mcal_Interrupt_Gen_CFG.h" 1
+# 16 "./MCAL_LAYER/INTERRUPT/mcal_Interrupt_config.h" 2
+# 49 "./MCAL_LAYER/INTERRUPT/mcal_Interrupt_config.h"
+typedef enum{
+    LOW_Priority = 0,
+    HIGH_Priority
+}Interrupt_priority_cfg;
+# 13 "./MCAL_LAYER/INTERRUPT/mcal_Interrupt_Manager.h" 2
+
+# 1 "./MCAL_LAYER/INTERRUPT/mcal_External_Interrupt.h" 1
+# 56 "./MCAL_LAYER/INTERRUPT/mcal_External_Interrupt.h"
+typedef enum{
+    FALLING_EDGE = 0,
+    RISING_EDGE
+}INTx_Interrupt_Edge;
+typedef enum{
+    Ext_INT0 = 0,
+    Ext_INT1,
+    Ext_INT2
+}INTx_Src;
+typedef struct{
+    INTx_Interrupt_Edge EDGE ;
+    INTx_Src SRC ;
+    Interrupt_priority_cfg PRIORITY ;
+    pinConfig_t PIN ;
+    void (*EX_Int_Handler)(void);
+}Inturrupt_INTx_t;
+# 81 "./MCAL_LAYER/INTERRUPT/mcal_External_Interrupt.h"
+Std_ReturnType Interrupt_INTx_Init(const Inturrupt_INTx_t *Int_Obj);
+Std_ReturnType Interrupt_INTx_Stop(const Inturrupt_INTx_t *Int_Obj );
+# 14 "./MCAL_LAYER/INTERRUPT/mcal_Interrupt_Manager.h" 2
+
+# 1 "./MCAL_LAYER/INTERRUPT/mcal_Internal_Interrupt.h" 1
+# 15 "./MCAL_LAYER/INTERRUPT/mcal_Interrupt_Manager.h" 2
+# 8 "Application.c" 2
+
+
+led_t led1 = {
+    .port = PORTC_INDEX ,
+    .pin = GPIO_PIN0 ,
+    .led_status = GPIO_LOW
 };
-char_lcd_8bit_t lcd2 = {
-   .lcd_rs = {
-       .Port = PORTC_INDEX ,
-       .Direction = GPIO_OUTPUT ,
-       .Pin_Number = GPIO_PIN6 ,
-       .Logic = GPIO_LOW
-   },
-   .lcd_en = {
-       .Port = PORTC_INDEX ,
-       .Direction = GPIO_OUTPUT ,
-       .Pin_Number = GPIO_PIN7 ,
-       .Logic = GPIO_LOW
-   },
-   .lcd_data[0].Port = PORTD_INDEX ,
-   .lcd_data[0].Direction = GPIO_OUTPUT ,
-   .lcd_data[0].Pin_Number = GPIO_PIN0,
-   .lcd_data[0].Logic = GPIO_LOW ,
-   .lcd_data[1].Port = PORTD_INDEX ,
-   .lcd_data[1].Direction = GPIO_OUTPUT ,
-   .lcd_data[1].Pin_Number = GPIO_PIN1,
-   .lcd_data[1].Logic = GPIO_LOW ,
-   .lcd_data[2].Port = PORTD_INDEX ,
-   .lcd_data[2].Direction = GPIO_OUTPUT ,
-   .lcd_data[2].Pin_Number = GPIO_PIN2,
-   .lcd_data[2].Logic = GPIO_LOW ,
-   .lcd_data[3].Port = PORTD_INDEX ,
-   .lcd_data[3].Direction = GPIO_OUTPUT ,
-   .lcd_data[3].Pin_Number = GPIO_PIN3,
-   .lcd_data[3].Logic = GPIO_LOW ,
-   .lcd_data[4].Port = PORTD_INDEX ,
-   .lcd_data[4].Direction = GPIO_OUTPUT ,
-   .lcd_data[4].Pin_Number = GPIO_PIN4,
-   .lcd_data[4].Logic = GPIO_LOW ,
-   .lcd_data[5].Port = PORTD_INDEX ,
-   .lcd_data[5].Direction = GPIO_OUTPUT ,
-   .lcd_data[5].Pin_Number = GPIO_PIN5,
-   .lcd_data[5].Logic = GPIO_LOW ,
-   .lcd_data[6].Port = PORTD_INDEX ,
-   .lcd_data[6].Direction = GPIO_OUTPUT ,
-   .lcd_data[6].Pin_Number = GPIO_PIN6,
-   .lcd_data[6].Logic = GPIO_LOW ,
-   .lcd_data[7].Port = PORTD_INDEX ,
-   .lcd_data[7].Direction = GPIO_OUTPUT ,
-   .lcd_data[7].Pin_Number = GPIO_PIN7,
-   .lcd_data[7].Logic = GPIO_LOW ,
+led_t led2 = {
+    .port = PORTC_INDEX ,
+    .pin = GPIO_PIN1 ,
+    .led_status = GPIO_LOW
 };
-int main() {
-    Std_ReturnType ret = (Std_ReturnType)0x00 ;
-    ret= lcd_init_4bit(&lcd1);
-    ret= lcd_init_8bit(&lcd2);
-    ret= lcd_send_data_8bit(&lcd2,'A');
-    ret= lcd_send_data_pos_8bit(&lcd2,'L',5,1);
-    ret= lcd_send_data_pos_8bit(&lcd2,'Y',10,2);
-    ret= lcd_send_string_pos_8bit(&lcd2,"AHMED",0,3);
-    ret= lcd_send_data_4bit(&lcd1,'A');
-    ret= lcd_send_data_pos_4bit(&lcd1,'L',5,1);
-    ret= lcd_send_data_pos_4bit(&lcd1,'Y',10,2);
-    ret= lcd_send_string_pos_4bit(&lcd1,"AHMED",0,3);
+void ISR_BUTTON_INT0(void)
+{
+    led_toggle_state(&led2);
+}
+
+Inturrupt_INTx_t INT0_INTERRUPT = {
+    .PIN.Port = PORTB_INDEX ,
+    .PIN.Pin_Number = GPIO_PIN0 ,
+    .PIN.Direction = GPIO_INPUT ,
+    .PRIORITY = HIGH_Priority ,
+    .SRC = Ext_INT0 ,
+    .EDGE = RISING_EDGE ,
+    .EX_Int_Handler = ISR_BUTTON_INT0
+};
+int main(void){
+    Std_ReturnType ret = (Std_ReturnType)0x01 ;
+    ret = led_init(&led1);
+    ret = led_init(&led2);
+    ret = Interrupt_INTx_Init(&INT0_INTERRUPT);
     while(1)
     {
-
+        ret = led_toggle_state(&led1);
+        _delay((unsigned long)((500)*(4000000UL/4000.0)));
+        ret = led_toggle_state(&led1);
+        _delay((unsigned long)((500)*(4000000UL/4000.0)));
     }
     return (0);
 }

@@ -4730,19 +4730,9 @@ typedef struct{
     pinConfig_t PIN ;
     void (*EX_Int_Handler)(void);
 }Inturrupt_INTx_t;
-
-typedef struct{
-    Interrupt_priority_cfg PRIORITY ;
-    pinConfig_t PIN ;
-    void (*EX_Int_Handler)(void);
-}Inturrupt_RBx_t;
-
-
-Std_ReturnType Interrupt_INTx_Start(const Inturrupt_INTx_t *Int_Obj);
+# 81 "MCAL_LAYER/INTERRUPT/mcal_External_Interrupt.h"
+Std_ReturnType Interrupt_INTx_Init(const Inturrupt_INTx_t *Int_Obj);
 Std_ReturnType Interrupt_INTx_Stop(const Inturrupt_INTx_t *Int_Obj );
-
-Std_ReturnType Interrupt_RBx_Start(const Inturrupt_RBx_t *Int_Obj);
-Std_ReturnType Interrupt_RBx_Stop(const Inturrupt_RBx_t *Int_Obj );
 # 1 "MCAL_LAYER/INTERRUPT/mcal_External_Interrupt.c" 2
 
 
@@ -4762,13 +4752,8 @@ static Std_ReturnType Set_INT1_Interrupt_Handller(void (*Int_Interrupt_Handller)
 static Std_ReturnType Set_INT2_Interrupt_Handller(void (*Int_Interrupt_Handller)(void));
 
 static Std_ReturnType Set_INTx_Interrupt_Handller(const Inturrupt_INTx_t *Int_Obj);
-
-static Std_ReturnType Interrupt_RBx_Enable(const Inturrupt_RBx_t *Int_Obj );
-static Std_ReturnType Interrupt_RBx_Disable(const Inturrupt_RBx_t *Int_Obj );
-static Std_ReturnType Interrupt_RBx_Priority_Init(const Inturrupt_RBx_t *Int_Obj );
-static Std_ReturnType Interrupt_RBx_Pin_Init(const Inturrupt_RBx_t *Int_Obj );
-# 32 "MCAL_LAYER/INTERRUPT/mcal_External_Interrupt.c"
-Std_ReturnType Interrupt_INTx_Start(const Inturrupt_INTx_t *Int_Obj){
+# 27 "MCAL_LAYER/INTERRUPT/mcal_External_Interrupt.c"
+Std_ReturnType Interrupt_INTx_Init(const Inturrupt_INTx_t *Int_Obj){
     Std_ReturnType ret = (Std_ReturnType)0x01 ;
     if(((void*)0) == Int_Obj)
     {
@@ -4788,64 +4773,7 @@ Std_ReturnType Interrupt_INTx_Start(const Inturrupt_INTx_t *Int_Obj){
     }
     return ret ;
 }
-
-
-
-
-
-
-
-Std_ReturnType Interrupt_INTx_Stop(const Inturrupt_INTx_t *Int_Obj ){
-    Std_ReturnType ret = (Std_ReturnType)0x01 ;
-    if(((void*)0) == Int_Obj)
-    {
-        ret = (Std_ReturnType)0x00 ;
-    }
-    else
-    {
-        ret = Interrupt_INTx_Disable(Int_Obj);
-    }
-    return ret ;
-}
-
-
-
-
-
-
-
-Std_ReturnType Interrupt_RBx_Start(const Inturrupt_RBx_t *Int_Obj){
-    Std_ReturnType ret = (Std_ReturnType)0x01 ;
-    if(((void*)0) == Int_Obj)
-    {
-        ret = (Std_ReturnType)0x00 ;
-    }
-    else
-    {
-
-    }
-    return ret ;
-}
-
-
-
-
-
-
-
-Std_ReturnType Interrupt_RBx_Stop(const Inturrupt_RBx_t *Int_Obj ){
-    Std_ReturnType ret = (Std_ReturnType)0x01 ;
-    if(((void*)0) == Int_Obj)
-    {
-        ret = (Std_ReturnType)0x00 ;
-    }
-    else
-    {
-
-    }
-    return ret ;
-}
-
+# 65 "MCAL_LAYER/INTERRUPT/mcal_External_Interrupt.c"
 static Std_ReturnType Interrupt_INTx_Enable(const Inturrupt_INTx_t *Int_Obj ){
     Std_ReturnType ret = (Std_ReturnType)0x01 ;
     if(((void*)0) == Int_Obj)
@@ -5077,52 +5005,4 @@ void INT2_ISR(void){
     {
         Int2_Interrupt_Handller();
     }
-}
-static Std_ReturnType Interrupt_RBx_Enable(const Inturrupt_RBx_t *Int_Obj ){
-    Std_ReturnType ret = (Std_ReturnType)0x01 ;
-    if(((void*)0) == Int_Obj)
-    {
-        ret = (Std_ReturnType)0x00 ;
-    }
-    else
-    {
-
-    }
-    return ret ;
-}
-static Std_ReturnType Interrupt_RBx_Disable(const Inturrupt_RBx_t *Int_Obj ){
-    Std_ReturnType ret = (Std_ReturnType)0x01 ;
-    if(((void*)0) == Int_Obj)
-    {
-        ret = (Std_ReturnType)0x00 ;
-    }
-    else
-    {
-
-    }
-    return ret ;
-}
-static Std_ReturnType Interrupt_RBx_Priority_Init(const Inturrupt_RBx_t *Int_Obj ){
-    Std_ReturnType ret = (Std_ReturnType)0x01 ;
-    if(((void*)0) == Int_Obj)
-    {
-        ret = (Std_ReturnType)0x00 ;
-    }
-    else
-    {
-
-    }
-    return ret ;
-}
-static Std_ReturnType Interrupt_RBx_Pin_Init(const Inturrupt_RBx_t *Int_Obj ){
-    Std_ReturnType ret = (Std_ReturnType)0x01 ;
-    if(((void*)0) == Int_Obj)
-    {
-        ret = (Std_ReturnType)0x00 ;
-    }
-    else
-    {
-
-    }
-    return ret ;
 }
